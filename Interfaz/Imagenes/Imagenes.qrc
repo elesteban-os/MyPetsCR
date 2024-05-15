@@ -1,5 +1,12 @@
 <RCC>
   <qresource prefix="login">
+    <file>Imagen8.png</file>
+    <file>Imagen7.png</file>
+    <file>Imagen 6.png</file>
+    <file>Imagen1.png</file>
+    <file>Imagen5.png</file>
+    <file>Imagen3.png</file>
     <file>Imagen2.jpg</file>
+    <file>Imagen4.png</file>
   </qresource>
 </RCC>
