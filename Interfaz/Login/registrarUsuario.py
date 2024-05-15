@@ -14,7 +14,6 @@ class RegisterWindow(QMainWindow):
         self.parent = parent
         uic.loadUi("Ventana6.ui", self)
 
-        # Conecta el botón de registro
         self.pushButton.clicked.connect(self.register_user)
         
         # Conecta el botón de cancelar
