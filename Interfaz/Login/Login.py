@@ -17,7 +17,7 @@ class Login(QMainWindow):
 
         # Conecta el botón de salir con la función para cerrar la aplicación
         self.pushButton_2.clicked.connect(self.close_application)
-        
+
         # Conecta el botón de registro
         self.pushButton_3.clicked.connect(self.open_register_window)
 
@@ -50,9 +50,12 @@ class Login(QMainWindow):
             self.pushButton_3.setVisible(False)
 
 
+if __name__ == "__main__":
+    import sys
+    from PyQt6.QtWidgets import QApplication
+    app = QApplication(sys.argv)
+    window = Login()
+    window.show()
+    sys.exit(app.exec())
 
-app = QApplication(sys.argv)
-window = Login()
-window.show()
-sys.exit(app.exec())
 
