@@ -2,9 +2,8 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget,QMessageBox
 from PyQt6 import uic
 import sys 
 import re
-import sqlite3
 
-#from Login import Login
+from baseDatos import Database
 
 
 
@@ -14,10 +13,15 @@ class RegisterWindow(QMainWindow):
         self.parent = parent
         uic.loadUi("Ventana6.ui", self)
 
+        # Conecta el botón de registro
         self.pushButton.clicked.connect(self.register_user)
         
         # Conecta el botón de cancelar
         self.pushButton_2.clicked.connect(self.close_and_return)
+
+
+        # Inicializa la base de datos
+        self.database = Database()
 
     def register_user(self):
         # Recopila los datos del formulario
@@ -38,30 +42,12 @@ class RegisterWindow(QMainWindow):
             return
 
         # Guardar en la base de datos
-        conn = sqlite3.connect('users.db')
-        cursor = conn.cursor()
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nombre TEXT,
-                telefono TEXT,
-                correo TEXT,
-                contrasena TEXT,
-                mascota TEXT,
-                direccion TEXT
-            )
-        ''')
-        cursor.execute('''
-            INSERT INTO users (nombre, telefono, correo, contrasena, mascota, direccion)
-            VALUES (?, ?, ?, ?, ?, ?)
-        ''', (nombre, telefono, correo, contrasena, mascota, direccion))
-        conn.commit()
-        conn.close()
+        self.database.add_user(nombre, telefono, correo, contrasena, mascota, direccion)
 
         QMessageBox.information(self, "Éxito", "Usuario registrado exitosamente")
         self.close_and_return()
 
+
     def close_and_return(self):
-        if self.parent is not None:
-            self.parent.show()
+        self.parent.show()
         self.close()

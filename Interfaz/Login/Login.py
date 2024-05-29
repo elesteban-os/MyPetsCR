@@ -2,9 +2,11 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt6 import uic
 import sys 
-import re
-import sqlite3
 from registrarUsuario import RegisterWindow
+from pantallaPrincipal import Ventana5
+
+
+
 
 class Login(QMainWindow):
     def __init__(self):
@@ -17,7 +19,7 @@ class Login(QMainWindow):
 
         # Conecta el botón de salir con la función para cerrar la aplicación
         self.pushButton_2.clicked.connect(self.close_application)
-
+        
         # Conecta el botón de registro
         self.pushButton_3.clicked.connect(self.open_register_window)
 
@@ -26,6 +28,10 @@ class Login(QMainWindow):
 
         # Conecta el botón de inicio de sesión
         self.pushButton.clicked.connect(self.login_user)
+
+        #Conecta con pantallaPrincipal
+        self.pushButton.clicked.connect(self.open_ventana5)
+
 
         # Inicialmente, oculta el botón de registro
         self.pushButton_3.setVisible(False)
@@ -40,8 +46,16 @@ class Login(QMainWindow):
 
 
     def login_user(self):
-        # Implementar lógica
-        pass
+        # Obtener los valores de correo y contraseña
+        correo = self.lineEdit.text()
+        contrasena = self.lineEdit_2.text()
+
+        # Verificar si los campos están vacíos
+        if not correo or not contrasena:
+            self.label_7.setText("Correo y contraseña son obligatorios")
+            return
+
+
     def toggle_register_button(self):
         user_type = self.comboBox.currentText()
         if user_type == "Administrador":
@@ -49,13 +63,16 @@ class Login(QMainWindow):
         else:
             self.pushButton_3.setVisible(False)
 
+    def open_ventana5(self):
+        self.ventana5 = Ventana5(self)
+        self.ventana5.show()
+        self.hide()
 
-if __name__ == "__main__":
-    import sys
-    from PyQt6.QtWidgets import QApplication
-    app = QApplication(sys.argv)
-    window = Login()
-    window.show()
-    sys.exit(app.exec())
 
+
+
+app = QApplication(sys.argv)
+window = Login()
+window.show()
+sys.exit(app.exec())
 
