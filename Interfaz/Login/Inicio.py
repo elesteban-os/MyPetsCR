@@ -10,10 +10,16 @@ class Inicializar(QMainWindow):
 
         # Conectar el botón pushButton al método show_login
         self.pushButton.clicked.connect(self.show_login)
+        self.pushButton_3.clicked.connect(self.close_application)
 
+        
     def show_login(self):
         self.login_window = Login()
         self.login_window.show()
+
+
+    def close_application(self):
+        QApplication.quit()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

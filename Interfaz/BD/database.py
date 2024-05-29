@@ -1,49 +1,75 @@
 import sqlite3
 
-# Conectar a la base de datos 
-conn = sqlite3.connect('veterinaria.db')
-cursor = conn.cursor()
+def crear_tablas():
+    # Conectar a la base de datos
+    conn = sqlite3.connect('veterinaria.db')
+    cursor = conn.cursor()
 
-# Tabla de personas
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS personas (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        nombre TEXT NOT NULL,
-        apellido TEXT NOT NULL,
-        tipo TEXT NOT NULL,
-        email TEXT,
-        telefono TEXT
-    )
-''')
+    # Eliminar las tablas existentes para recrearlas correctamente
+    cursor.execute('DROP TABLE IF EXISTS personas')
+    cursor.execute('DROP TABLE IF EXISTS clientes')
+    cursor.execute('DROP TABLE IF EXISTS mascotas')
+    cursor.execute('DROP TABLE IF EXISTS citas')
 
-# Tabla mascotas
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS mascotas (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        nombre TEXT NOT NULL,
-        especie TEXT NOT NULL,
-        raza TEXT,
-        edad INTEGER,
-        id_cliente INTEGER,
-        FOREIGN KEY(id_cliente) REFERENCES personas(id)
-    )
-''')
+    # Crear tabla de personas Veterinarios y Administradores
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS personas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nombre TEXT NOT NULL,
+            apellido TEXT NOT NULL,
+            tipo_usuario TEXT NOT NULL,
+            email TEXT,
+            telefono TEXT,
+            direccion TEXT,
+            contrasena TEXT 
+        )
+    ''')
 
-# Tabla citas
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS citas (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        fecha TEXT NOT NULL,
-        id_cliente INTEGER,
-        id_mascota INTEGER,
-        id_veterinario INTEGER,
-        descripcion TEXT,
-        FOREIGN KEY(id_cliente) REFERENCES personas(id),
-        FOREIGN KEY(id_mascota) REFERENCES mascotas(id),
-        FOREIGN KEY(id_veterinario) REFERENCES personas(id)
-    )
-''')
+    # Crear tabla de personas Clientes
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS clientes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nombre TEXT NOT NULL,
+            apellido TEXT NOT NULL,
+            email TEXT,
+            telefono TEXT,
+            direccion TEXT,
+            contrasena TEXT, 
+            mascota TEXT 
+        )
+    ''')
 
-# Guardar cambios y cerrar conexión
-conn.commit()
-conn.close()
+    # Crear tabla de mascotas
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS mascotas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nombre TEXT NOT NULL,
+            especie TEXT NOT NULL,
+            raza TEXT NOT NULL,
+            edad INTEGER NOT NULL,
+            id_cliente INTEGER NOT NULL,
+            FOREIGN KEY (id_cliente) REFERENCES clientes (id)
+        )
+    ''')
+
+    # Crear tabla de citas
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS citas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            fecha TEXT NOT NULL,
+            id_cliente INTEGER NOT NULL,
+            id_mascota INTEGER NOT NULL,
+            id_veterinario INTEGER NOT NULL,
+            descripcion TEXT NOT NULL,
+            FOREIGN KEY (id_cliente) REFERENCES clientes (id),
+            FOREIGN KEY (id_mascota) REFERENCES mascotas (id),
+            FOREIGN KEY (id_veterinario) REFERENCES personas (id)
+        )
+    ''')
+
+    # Guardar cambios y cerrar conexión
+    conn.commit()
+    conn.close()
+
+# Crear las tablas
+crear_tablas()

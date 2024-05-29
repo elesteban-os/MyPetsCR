@@ -2,10 +2,9 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget,QMessageBox
 from PyQt6 import uic
 import sys 
 import re
+import sqlite3
 
-from baseDatos import Database
-
-
+#from Login import Login
 
 class RegisterWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -19,10 +18,6 @@ class RegisterWindow(QMainWindow):
         # Conecta el botón de cancelar
         self.pushButton_2.clicked.connect(self.close_and_return)
 
-
-        # Inicializa la base de datos
-        self.database = Database()
-
     def register_user(self):
         # Recopila los datos del formulario
         nombre = self.lineEdit.text()
@@ -31,9 +26,10 @@ class RegisterWindow(QMainWindow):
         contrasena = self.lineEdit_4.text()
         mascota = self.lineEdit_5.text()
         direccion = self.lineEdit_6.text()
+        tipo = self.lineEdit_7.text() 
 
         # Validación simple del formulario
-        if not (nombre and telefono and correo and contrasena and mascota and direccion):
+        if not (nombre and telefono and correo and contrasena and mascota and direccion and tipo):
             QMessageBox.warning(self, "Error", "Todos los campos son obligatorios")
             return
 
@@ -41,13 +37,8 @@ class RegisterWindow(QMainWindow):
             QMessageBox.warning(self, "Error", "Correo electrónico no válido")
             return
 
-        # Guardar en la base de datos
-        self.database.add_user(nombre, telefono, correo, contrasena, mascota, direccion)
-
-        QMessageBox.information(self, "Éxito", "Usuario registrado exitosamente")
-        self.close_and_return()
-
 
     def close_and_return(self):
-        self.parent.show()
+        if self.parent is not None:
+            self.parent.show()
         self.close()
