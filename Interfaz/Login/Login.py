@@ -9,7 +9,7 @@ from registrarUsuario import RegisterWindow
 class Login(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("Ventana2.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana2.ui", self)
 
         #Aquí van los botones
          # Accede al QComboBox y agrega las opciones
