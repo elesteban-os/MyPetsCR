@@ -1,3 +1,4 @@
+
 import sqlite3
 
 class insertarBaseDatos:
@@ -9,9 +10,9 @@ class insertarBaseDatos:
         try:
             # Insertar un cliente
             self.cursor.execute('''
-                INSERT INTO clientes (nombre, apellido, email, telefono, direccion, contrasena, mascota) VALUES 
-                (?, ?, ?, ?, ?, ?, ?)
-            ''', ('Juan', 'Perez', 'juan.perez@example.com', '123456789', 'Calle 123', 'password123', 'Bobby'))
+                INSERT INTO clientes (nombre, apellido, tipo_usuario, email, telefono, direccion, contrasena, mascota) VALUES 
+                (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', ('Juan', 'Perez', 'Cliente', 'juan.perez@example.com', '123456789', 'Calle 123', 'password123', 'Bobby'))
 
             # Obtener el ID del cliente insertado
             id_cliente = self.cursor.lastrowid
@@ -30,6 +31,15 @@ class insertarBaseDatos:
                 INSERT INTO personas (nombre, apellido, tipo_usuario, email, telefono, direccion, contrasena) VALUES 
                 (?, ?, ?, ?, ?, ?, ?)
             ''', ('Valerin', 'Calderon', 'veterinario', 'vale.calderon@gmail.com', '987654321', 'Avenida 456', 'vetpassword'))
+
+            # Insertar un Adminstrador
+            self.cursor.execute('''
+                INSERT INTO personas (nombre, apellido, tipo_usuario, email, telefono, direccion, contrasena) VALUES 
+                (?, ?, ?, ?, ?, ?, ?)
+            ''', ('Meibel', 'Mora', 'Administrador', 'meimb03@gmail.com', '987654321', 'Cartago', '1234'))
+
+
+
 
             # Obtener el ID del veterinario insertado
             id_veterinario = self.cursor.lastrowid
