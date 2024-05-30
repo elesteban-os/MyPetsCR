@@ -31,6 +31,7 @@ def crear_tablas():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nombre TEXT NOT NULL,
             apellido TEXT NOT NULL,
+            tipo_usuario TEXT NOT NULL,  
             email TEXT,
             telefono TEXT,
             direccion TEXT,
@@ -67,6 +68,22 @@ def crear_tablas():
         )
     ''')
 
+    # Guardar cambios
+    conn.commit()
+
+    # Depuración: Imprimir el esquema de la base de datos
+    for row in cursor.execute("SELECT name FROM sqlite_master WHERE type='table';"):
+        print(row)
+
+    # Depuración: Imprimir el esquema de la tabla clientes
+    for row in cursor.execute("PRAGMA table_info(clientes);"):
+        print(row)
+
+    # Cerrar conexión
+    conn.close()
+
+# Crear las tablas
+crear_tablas()
     # Guardar cambios y cerrar conexión
     conn.commit()
     conn.close()
