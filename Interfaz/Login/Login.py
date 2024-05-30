@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt6 import uic
 import sys
 import sqlite3
-from registrarUsuario import RegisterWindow
+from registrarUsuario import RegistrarUsuario
 
 class Login(QMainWindow):
     def __init__(self):
@@ -16,8 +16,8 @@ class Login(QMainWindow):
         QApplication.quit()
 
     def login_user(self):
-        email = self.lineEdit.text()
-        password = self.lineEdit_2.text()
+        email = self.lineEdit.text().strip().lower()
+        password = self.lineEdit_2.text().strip()
         selected_role = None
 
         if self.radioButton.isChecked():
@@ -28,10 +28,10 @@ class Login(QMainWindow):
             selected_role = "Cliente"
 
         if not email or not password or not selected_role:
-            QMessageBox.warning(self, "Login Failed", "Please fill all fields and select a role")
+            QMessageBox.warning(self, "Login Failed", "Por favor llene todos los espacios en blanco y seleccione un rol")
             return
 
-        print(f"Intentando iniciar sesión con Email: {email}, Contraseña: {password}, Rol: {selected_role}")
+      #  print(f"Intentando iniciar sesión con Email: {email}, Contraseña: {password}, Rol: {selected_role}")
 
         if self.verify_user(email, password, selected_role):
             QMessageBox.information(self, "Login exitoso", f"Logueado como un {selected_role}")
@@ -44,24 +44,26 @@ class Login(QMainWindow):
         cursor = conn.cursor()
 
         if role == "Cliente":
-            query = 'SELECT * FROM clientes WHERE email = ? AND contrasena = ?'
-            cursor.execute(query, (email, password))
+            query = 'SELECT * FROM clientes WHERE LOWER(email) = ? AND contrasena = ? AND LOWER(tipo_usuario) = ?'
+            cursor.execute(query, (email, password, role.lower()))
         else:
-            query = 'SELECT * FROM personas WHERE email = ? AND contrasena = ? AND tipo_usuario = ?'
+            query = 'SELECT * FROM personas WHERE LOWER(email) = ? AND contrasena = ? AND LOWER(tipo_usuario) = ?'
             cursor.execute(query, (email, password, role.lower()))
 
         user = cursor.fetchone()
         conn.close()
 
-        print(f"Consulta SQL: {query}")
-        print(f"Parámetros: {email}, {password}, {role.lower()}")
-        print(f"Resultado de la consulta: {user}")
+       # print(f"Consulta SQL: {query}")
+       # print(f"Parámetros: {email}, {password}, {role.lower()}")
+       # print(f"Resultado de la consulta: {user}")
 
         return user is not None
 
     def redirect_user(self, role):
         if role == "Cliente":
-            self.window = RegisterWindow(self)
+            self.window = QMainWindow()
+            uic.loadUi("Ventana5.ui", self.window)
+            
         elif role == "Administrador":
             self.window = QMainWindow()
             uic.loadUi("Ventana7.ui", self.window)
