@@ -6,7 +6,7 @@ from PyQt6 import uic
 class RegistrarUsuario(QMainWindow):
     def __init__(self, main_window):
         super().__init__()
-        uic.loadUi("Ventana6.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana6.ui", self)
         self.main_window = main_window
         self.pushButton.clicked.connect(self.register_user)
 

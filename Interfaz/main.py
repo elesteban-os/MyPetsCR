@@ -7,6 +7,8 @@ from ventanas.cliente import ClienteWindow
 from ventanas.administrador import AdministradorWindow
 from ventanas.veterinario import VeterinarioWindow
 from ventanas.Inicio import Inicializar
+from ventanas.Tienda import Tienda
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -16,10 +18,14 @@ class MainWindow(QMainWindow):
         self.cliente_window = ClienteWindow()
         self.administrador_window = AdministradorWindow()
         self.veterinario_window = VeterinarioWindow()
+        self.tienda_window = Tienda(self)
         self.show_inicio_window()
 
     def show_inicio_window(self):
         self.inicio_window.show()
+
+    def show_tienda_window(self):
+        self.tienda_window.show()
 
     def show_login_window(self):
         self.login_window.show()

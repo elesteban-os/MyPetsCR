@@ -6,7 +6,7 @@ class Login(QMainWindow):
     def __init__(self, main_window):
         super().__init__()
         self.main_window = main_window
-        uic.loadUi("Ventana2.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana2.ui", self)
         self.pushButton_2.clicked.connect(self.close_application)
         self.pushButton.clicked.connect(self.login_user)
 

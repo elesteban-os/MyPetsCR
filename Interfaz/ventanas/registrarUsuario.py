@@ -8,7 +8,7 @@ class FormularioRegistro(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.parent_window = parent
-        uic.loadUi("Ventana6.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana6.ui", self)
 
        # self.pushButton.clicked.connect(self.registrar_cliente)
         self.pushButton_2.clicked.connect(self.volver_a_pagina_administrador)
