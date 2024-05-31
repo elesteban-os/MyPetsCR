@@ -95,7 +95,6 @@ class MainWindow(QtWidgets.QMainWindow):
         }
         fecha_hora = datetime.combine(self.dateEdit.date().toPyDate(), self.timeEdit.time().toPyTime())
         
-        # Obtener la sede seleccionada
         sede_nombre = self.comboBox.currentText()
         sede = next((s for s in self.sedes if s.nombre == sede_nombre), None)
         
