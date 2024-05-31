@@ -1,5 +1,5 @@
 from PyQt6 import QtWidgets, QtGui, uic
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListView, QVBoxLayout
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout
 from PyQt6.QtGui import QStandardItemModel, QStandardItem
 import os
 import json
@@ -21,28 +21,74 @@ class Producto:
     def __str__(self):
         return f"{self.descripcion} ({self.marca}) - ${self.precio_final():.2f}"
 
+class ProductoItem(QWidget):
+    def __init__(self, producto, remove_callback):
+        super().__init__()
+        self.producto = producto
+        self.remove_callback = remove_callback
+
+        layout = QHBoxLayout()
+        self.setLayout(layout)
+
+        self.label = QLabel(self.producto.__str__())
+        layout.addWidget(self.label)
+
+        self.remove_button = QPushButton("X")
+        self.remove_button.setFixedSize(20, 20)
+        self.remove_button.clicked.connect(self.remove_item)
+        layout.addWidget(self.remove_button)
+
+    def remove_item(self):
+        self.remove_callback(self.producto)
+
 class ProductosListView(QWidget):
-    def __init__(self, productos):
+    def __init__(self, productos, remove_callback):
         super().__init__()
         self.setWindowTitle("Lista de Productos Seleccionados")
         self.setGeometry(100, 100, 600, 400)
+        self.remove_callback = remove_callback
 
         layout = QVBoxLayout()
 
-        self.list_view = QListView()
+        self.list_view = QListWidget()
         layout.addWidget(self.list_view)
 
-        self.model = QStandardItemModel()
-        self.list_view.setModel(self.model)
+        self.total_label = QLabel("Total: $0.00")
+        layout.addWidget(self.total_label)
+
+        self.process_payment_button = QPushButton("Procesar el Pago")
+        self.process_payment_button.clicked.connect(self.process_payment)
+        layout.addWidget(self.process_payment_button)
 
         self.load_data(productos)
 
         self.setLayout(layout)
+        self.update_total()
 
     def load_data(self, productos):
+        self.productos = productos
+        self.list_view.clear()
         for producto in productos:
-            item = QStandardItem(producto.__str__())
-            self.model.appendRow(item)
+            item_widget = ProductoItem(producto, self.remove_product)
+            list_item = QListWidgetItem(self.list_view)
+            list_item.setSizeHint(item_widget.sizeHint())
+            self.list_view.addItem(list_item)
+            self.list_view.setItemWidget(list_item, item_widget)
+
+    def update_total(self):
+        total_amount = sum(producto.precio_final() for producto in self.productos)
+        self.total_label.setText(f"Total: ${total_amount:.2f}")
+
+    def remove_product(self, producto):
+        self.productos.remove(producto)
+        self.load_data(self.productos)
+        self.update_total()
+
+    def process_payment(self):
+        QMessageBox.information(self, "Pago Procesado", "El pago ha sido procesado con éxito.")
+        self.productos.clear()
+        self.load_data(self.productos)
+        self.update_total()
 
 class Tienda(QtWidgets.QWidget):
     def __init__(self):
@@ -63,7 +109,7 @@ class Tienda(QtWidgets.QWidget):
         self.image = QtWidgets.QLabel(self)
         self.image.setGeometry(860, 350, 200, 200)
         self.image.setScaledContents(True)
-        image_path = image_path = "C:\\Users\\fmele\\OneDrive\\Desktop\\mipet2.jpg"
+        image_path = "C:\\Users\\fmele\\OneDrive\\Desktop\\mipet2.jpg"
         if os.path.exists(image_path):
             pixmap = QtGui.QPixmap(image_path)
             if not pixmap.isNull():
@@ -77,7 +123,7 @@ class Tienda(QtWidgets.QWidget):
 
     def show_selected_productos_list(self):
         if self.selected_products:
-            self.productos_list = ProductosListView(self.selected_products)
+            self.productos_list = ProductosListView(self.selected_products, self.remove_product_from_selected)
             self.productos_list.show()
         else:
             self.showWarningMessage("No hay productos seleccionados.")
@@ -144,6 +190,9 @@ class Tienda(QtWidgets.QWidget):
     def updateCartLabel(self):
         cart_count = len(self.selected_products)
         self.label_7.setText(f"{cart_count}")
+
+    def remove_product_from_selected(self, producto):
+        self.selected_products.remove(producto)
 
 if __name__ == "__main__":
     import sys
