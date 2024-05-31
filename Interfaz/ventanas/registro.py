@@ -1,11 +1,12 @@
+import sqlite3
 from PyQt6.QtWidgets import QMainWindow, QMessageBox
 from PyQt6 import uic
-from db.database import Database
+
 
 class RegistrarUsuario(QMainWindow):
     def __init__(self, main_window):
         super().__init__()
-        uic.loadUi("ui/Ventana6.ui", self)
+        uic.loadUi("Ventana6.ui", self)
         self.main_window = main_window
         self.pushButton.clicked.connect(self.register_user)
 

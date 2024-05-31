@@ -13,6 +13,11 @@ class insertarBaseDatos:
                 INSERT INTO clientes (nombre, apellido, tipo_usuario, email, telefono, direccion, contrasena, mascota) VALUES 
                 (?, ?, ?, ?, ?, ?, ?, ?)
             ''', ('Juan', 'Perez', 'Cliente', 'juan.perez@example.com', '123456789', 'Calle 123', 'password123', 'Bobby'))
+           
+            self.cursor.execute('''
+                INSERT INTO clientes (nombre, apellido, tipo_usuario, email, telefono, direccion, contrasena, mascota) VALUES 
+                (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', ('Fabiola', 'Castro', 'Cliente', 'fabi.castro@gmail.com', '65788967', 'Calle 126', '456', 'Alex'))  
 
             # Obtener el ID del cliente insertado
             id_cliente = self.cursor.lastrowid

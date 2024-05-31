@@ -9,8 +9,6 @@ class PaginaAdministrador(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         uic.loadUi("Ventana7.ui", self)
-
-
         # Conectar el botón de registrar usuario a la función para abrir el formulario de registro
         self.pushButton_1.clicked.connect(self.abrir_formulario_registro)
         self.pushButton_9.clicked.connect(self.close_and_return)
@@ -26,7 +24,7 @@ class PaginaAdministrador(QMainWindow):
     def close_and_return(self):
         if self.parent() is not None:
             self.parent().show()
-        self.close()
+        self.close()   
 
 #if __name__ == "__main__":
    # app = QApplication(sys.argv)

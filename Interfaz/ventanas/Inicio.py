@@ -1,10 +1,11 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from PyQt6 import uic
 import sys
-from Login import Login
+from .Login import Login
 
 class Inicializar(QMainWindow):
-    def __init__(self):
+    def __init__(self, main_window):
+        self.main_window = main_window
         super().__init__()
         uic.loadUi("Ventana0.ui", self)
 
@@ -14,7 +15,7 @@ class Inicializar(QMainWindow):
 
         
     def show_login(self):
-        self.login_window = Login()
+        self.login_window = Login(self.main_window)
         self.login_window.show()
 
 
