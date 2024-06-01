@@ -2,6 +2,7 @@
 from PyQt6 import QtWidgets, QtGui, uic
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout
 from PyQt6.QtGui import QStandardItemModel, QStandardItem
+from .Login import Login
 import os
 import json
 
@@ -121,6 +122,18 @@ class Tienda(QtWidgets.QWidget):
         self.selected_products = []
 
         self.pushButton_5.clicked.connect(self.show_selected_productos_list)
+        self.pushButton_4.clicked.connect(self.show_login)
+        self.pushButton.clicked.connect(self.show_main_window)
+
+    def show_login(self):
+        self.login_window = Login(self.main_window)
+        self.login_window.show()
+        self.close()
+
+    def show_main_window(self):
+        self.main_window.show()  # Mostrar la ventana principal
+        self.close()
+    
 
     def show_selected_productos_list(self):
         if self.selected_products:
@@ -146,9 +159,6 @@ class Tienda(QtWidgets.QWidget):
     def loaddata(self):
         #esto agarra las cosas del archivo json
         json_file_path = r"C:\Users\fmele\Downloads\Productos_Veterinaria (1).json"
-
-        #se hace una lista para almacenar los productor
-        self.productos = []
 
         if os.path.isfile(json_file_path):
             with open(json_file_path, 'r', encoding='utf-8') as file:
