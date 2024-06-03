@@ -1,8 +1,8 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from PyQt6 import uic
 import sys
-from .Login import Login
-from .Tienda import Tienda
+from ventanas.Login import Login
+from ventanas.Tienda import Tienda
 
 class Inicializar(QMainWindow):
     def __init__(self, main_window):
