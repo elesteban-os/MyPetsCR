@@ -260,7 +260,7 @@ font: 38pt &quot;Showcard Gothic&quot;;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../Users/fmele/OneDrive/Desktop/mipet2.jpg</pixmap>
+     <pixmap>Imagenes/mipet2.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -389,7 +389,7 @@ color: rgb(0, 188, 0);</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Users/fmele/OneDrive/Desktop/OIP.jpg</normaloff>../../../Users/fmele/OneDrive/Desktop/OIP.jpg</iconset>
+     <normaloff>Imagenes/OIP.jpg</normaloff>Imagenes/OIP.jpg</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -418,7 +418,7 @@ color: rgb(0, 188, 0);</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Users/fmele/OneDrive/Desktop/shopping_cart_PNG38.png</normaloff>../../../Users/fmele/OneDrive/Desktop/shopping_cart_PNG38.png</iconset>
+     <normaloff>Imagenes/shopping_cart_PNG38.png</normaloff>Imagenes/shopping_cart_PNG38.png</iconset>
    </property>
    <property name="iconSize">
     <size>

@@ -111,7 +111,7 @@ class Tienda(QtWidgets.QWidget):
         self.image = QtWidgets.QLabel(self)
         self.image.setGeometry(860, 350, 200, 200)
         self.image.setScaledContents(True)
-        image_path = "C:\\Users\\fmele\\OneDrive\\Desktop\\mipet2.jpg"
+        image_path = "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\mipet2.jpg"
         if os.path.exists(image_path):
             pixmap = QtGui.QPixmap(image_path)
             if not pixmap.isNull():
@@ -158,7 +158,7 @@ class Tienda(QtWidgets.QWidget):
       
     def loaddata(self):
         #esto agarra las cosas del archivo json
-        json_file_path = r"C:\Users\fmele\Downloads\Productos_Veterinaria (1).json"
+        json_file_path = r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Productos_Veterinaria (1).json"
 
         if os.path.isfile(json_file_path):
             with open(json_file_path, 'r', encoding='utf-8') as file:

@@ -27,9 +27,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>180</x>
       <y>0</y>
-      <width>561</width>
+      <width>391</width>
       <height>101</height>
      </rect>
     </property>
@@ -44,17 +44,23 @@ color:red;</string>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>-40</x>
-      <y>0</y>
-      <width>181</width>
-      <height>111</height>
+      <x>0</x>
+      <y>-10</y>
+      <width>131</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/login/Imagen2.jpg)</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen2.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_9">
@@ -84,10 +90,16 @@ color: red;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/login/Imagen4.png)</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen4.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_8">
@@ -109,67 +121,89 @@ color: red;</string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>-60</x>
-      <y>270</y>
-      <width>291</width>
-      <height>181</height>
+      <x>-50</x>
+      <y>280</y>
+      <width>251</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/login/Imagen 6.png)
-
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen 6.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>400</y>
+      <x>20</x>
+      <y>410</y>
       <width>91</width>
-      <height>71</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/login/Imagen5.png)</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen5.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>510</y>
+      <x>30</x>
+      <y>520</y>
       <width>81</width>
       <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image:  url(:/login/Imagen1.png)</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen1.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>710</x>
+      <x>730</x>
       <y>220</y>
-      <width>191</width>
-      <height>121</height>
+      <width>131</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/login/Imagen8.png)</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen8.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -195,10 +229,16 @@ color: red;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/login/Imagen3.png)</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen3.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -404,7 +444,7 @@ color: red;</string>
      <x>0</x>
      <y>0</y>
      <width>1185</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

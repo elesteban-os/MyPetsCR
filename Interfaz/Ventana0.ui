@@ -208,7 +208,7 @@ color: white ;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../Users/fmele/OneDrive/Desktop/mipet2.jpg</pixmap>
+      <pixmap>Imagenes/mipet2.jpg</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -570,7 +570,7 @@ background-color: rgb(77, 115, 129);</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../Users/fmele/OneDrive/Desktop/facebook2.png</normaloff>../../../Users/fmele/OneDrive/Desktop/facebook2.png</iconset>
+       <normaloff>Imagenes/facebook2.png</normaloff>Imagenes/facebook2.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -599,7 +599,7 @@ background-color: rgb(77, 115, 129);</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../Users/fmele/OneDrive/Desktop/insta.png</normaloff>../../../Users/fmele/OneDrive/Desktop/insta.png</iconset>
+       <normaloff>Imagenes/insta.png</normaloff>Imagenes/insta.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -628,7 +628,7 @@ background-color: rgb(77, 115, 129);</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../Users/fmele/OneDrive/Desktop/tiktok-share-icon-black-logo-29FFD062A0-seeklogo.com.png</normaloff>../../../Users/fmele/OneDrive/Desktop/tiktok-share-icon-black-logo-29FFD062A0-seeklogo.com.png</iconset>
+       <normaloff>Imagenes/tiktok-share-icon-black-logo-29FFD062A0-seeklogo.com.png</normaloff>Imagenes/tiktok-share-icon-black-logo-29FFD062A0-seeklogo.com.png</iconset>
      </property>
      <property name="iconSize">
       <size>

@@ -190,7 +190,7 @@ color: white;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../Users/fmele/OneDrive/Desktop/imagenes_paraJson/MiPet.jpg</pixmap>
+     <pixmap>Imagenes/mipet2.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
