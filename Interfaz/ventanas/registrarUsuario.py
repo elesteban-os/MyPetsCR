@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QComboBox, Q
 from PyQt6 import uic
 import sys
 import sqlite3
-from MostrarDatos import MostrarDatos
+from ventanas.MostrarDatos import MostrarDatos
 
 
 
@@ -11,7 +11,7 @@ class FormularioRegistro(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.parent_window = parent
-        uic.loadUi("Ventana6.ui", self)
+        uic.loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana7.ui", self)
 
        # self.pushButton.clicked.connect(self.registrar_cliente)
         self.pushButton_2.clicked.connect(self.volver_a_pagina_administrador)

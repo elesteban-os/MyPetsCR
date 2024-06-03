@@ -5,16 +5,18 @@ import sqlite3
 from registrarUsuario import FormularioRegistro
 from Citas import VentanaCitasAdmi
 
+#este archivo nunca se usa y para nada sirve tambien entonces se usó el otro
+#(no sé pq habían 2 la vdd pero el otro archivo era el que estaba conectado a main entonces ajá)
+
 class PaginaAdministrador(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         uic.loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana7.ui", self)
         
-        # Debug statements to verify loading and connections
+
         print("UI loaded")
         
         try:
-            # Connecting buttons to their respective methods
             self.pushButton_1.clicked.connect(self.abrir_formulario_registro)
             print("pushButton_1 connected")
             self.pushButton_9.clicked.connect(self.close_and_return)
@@ -36,7 +38,6 @@ class PaginaAdministrador(QMainWindow):
         self.ventana_productos.setGeometry(150, 150, 400, 300)
         self.ventana_productos.show()
 
-    # Placeholder methods for other buttons
     def abrir_formulario_registro(self):
         print("Abrir formulario de registro")
 

@@ -8,7 +8,6 @@
         "CantidadDisponible": 13,
         "Categoría": "Juguetes",
         "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\1.jpg"
-        
     },
     {
         "Código": "PROD002",
@@ -19,7 +18,6 @@
         "CantidadDisponible": 39,
         "Categoría": "Alimento para gatos",
         "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\2.jpg"
-
     },
     {
         "Código": "PROD003",

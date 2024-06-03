@@ -131,7 +131,7 @@ class Tienda(QtWidgets.QWidget):
         self.close()
 
     def show_main_window(self):
-        self.main_window.show()  # Mostrar la ventana principal
+        # Mostrar la ventana principal
         self.close()
     
 

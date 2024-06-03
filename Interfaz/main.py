@@ -9,6 +9,8 @@ from ventanas.veterinario import VeterinarioWindow
 from ventanas.Inicio import Inicializar
 from ventanas.Tienda import Tienda
 
+#deberíamos hacer que cuando se toque la X de arriba (la que sale n rojo siempre) 
+#se cierre todo el programa y q nada más cada ventana se pueda hacer para atras(algunas ya tienen eso de hacerse para atras pero lo de la x roja habría que hacerlo)
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
