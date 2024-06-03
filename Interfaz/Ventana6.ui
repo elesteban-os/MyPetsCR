@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1291</width>
-    <height>915</height>
+    <height>883</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,29 +36,11 @@ color:red;</string>
      <string>MiPet</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>70</y>
-      <width>571</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:white;
-
-font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string> Registro Dueño: </string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>120</y>
+      <x>-60</x>
+      <y>260</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -73,8 +55,8 @@ font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>-50</x>
-      <y>220</y>
+      <x>-30</x>
+      <y>400</y>
       <width>331</width>
       <height>61</height>
      </rect>
@@ -89,8 +71,8 @@ font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>120</y>
+      <x>190</x>
+      <y>260</y>
       <width>391</width>
       <height>41</height>
      </rect>
@@ -103,9 +85,9 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>230</y>
-      <width>381</width>
+      <x>310</x>
+      <y>410</y>
+      <width>391</width>
       <height>41</height>
      </rect>
     </property>
@@ -120,8 +102,8 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>790</y>
+      <x>860</x>
+      <y>640</y>
       <width>221</width>
       <height>51</height>
      </rect>
@@ -133,14 +115,14 @@ border-radius:20px;
 color: white;</string>
     </property>
     <property name="text">
-     <string>ACEPTAR</string>
+     <string>Registrar</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>1100</x>
-      <y>790</y>
+      <x>1110</x>
+      <y>640</y>
       <width>151</width>
       <height>51</height>
      </rect>
@@ -152,7 +134,7 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
 color: white;</string>
     </property>
     <property name="text">
-     <string>CANCELAR</string>
+     <string>Cancelar </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -174,8 +156,8 @@ color: white;</string>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>150</y>
+      <x>520</x>
+      <y>250</y>
       <width>331</width>
       <height>61</height>
      </rect>
@@ -190,8 +172,8 @@ color: white;</string>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>220</y>
+      <x>520</x>
+      <y>320</y>
       <width>331</width>
       <height>61</height>
      </rect>
@@ -206,8 +188,8 @@ color: white;</string>
    <widget class="QLineEdit" name="lineEdit_3">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>160</y>
+      <x>860</x>
+      <y>260</y>
       <width>381</width>
       <height>41</height>
      </rect>
@@ -223,8 +205,8 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLineEdit" name="lineEdit_4">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>230</y>
+      <x>860</x>
+      <y>340</y>
       <width>381</width>
       <height>41</height>
      </rect>
@@ -240,8 +222,8 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>-50</x>
-      <y>290</y>
+      <x>-30</x>
+      <y>480</y>
       <width>331</width>
       <height>61</height>
      </rect>
@@ -256,8 +238,8 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLineEdit" name="lineEdit_6">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>310</y>
+      <x>320</x>
+      <y>490</y>
       <width>381</width>
       <height>41</height>
      </rect>
@@ -273,8 +255,8 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>-50</x>
-      <y>360</y>
+      <x>-30</x>
+      <y>540</y>
       <width>331</width>
       <height>61</height>
      </rect>
@@ -286,48 +268,13 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Tipo de Usuario:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>380</y>
-      <width>381</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius:10px;
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>450</y>
-      <width>571</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:white;
-
-font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Registro de Mascota:</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>20</y>
-      <width>771</width>
-      <height>61</height>
+      <x>150</x>
+      <y>120</y>
+      <width>851</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -337,196 +284,14 @@ font: 22pt &quot;MS Shell Dlg 2&quot;;
 font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Formulario de Registro de Paciente y Dueño</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>520</y>
-      <width>291</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius:10px;
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_13">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>520</y>
-      <width>241</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Nombre Completo:&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>590</y>
-      <width>241</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Especie:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_15">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>650</y>
-      <width>241</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Raza:&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_16">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>700</y>
-      <width>241</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Edad: &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_17">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>520</y>
-      <width>241</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;ID cliente asociado: &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_9">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>590</y>
-      <width>291</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius:10px;
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_10">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>650</y>
-      <width>291</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius:10px;
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_11">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>710</y>
-      <width>291</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius:10px;
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_12">
-    <property name="geometry">
-     <rect>
-      <x>940</x>
-      <y>520</y>
-      <width>301</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius:10px;
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_14">
-    <property name="geometry">
-     <rect>
-      <x>1000</x>
-      <y>570</y>
-      <width>181</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: red;</string>
-    </property>
-    <property name="text">
-     <string>Buscar </string>
+     <string>Formulario de Registro de Usuario</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>170</y>
+      <x>-60</x>
+      <y>330</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -541,8 +306,8 @@ color: red;</string>
    <widget class="QLineEdit" name="lineEdit_5">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>170</y>
+      <x>190</x>
+      <y>330</y>
       <width>391</width>
       <height>41</height>
      </rect>
@@ -550,6 +315,38 @@ color: red;</string>
     <property name="styleSheet">
      <string notr="true">border-radius:10px;
 font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_tipo_usuario">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>550</y>
+      <width>381</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonMostrarDatos">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>640</y>
+      <width>371</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(224, 123, 79);
+border-radius:20px;
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>Mostrar Datos Registrados </string>
     </property>
    </widget>
   </widget>
