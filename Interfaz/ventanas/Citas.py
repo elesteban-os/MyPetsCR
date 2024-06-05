@@ -17,7 +17,7 @@ class VentanaPrincipal(QMainWindow):
 class VentanaCitasAdmi(QMainWindow):
     def __init__(self):
         super().__init__()
-        loadUi("Citas_Admi.ui", self)
+        loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Citas_Admi_ui.py", self)
         self.pushButton.clicked.connect(self.close)
 
 if __name__ == "__main__":

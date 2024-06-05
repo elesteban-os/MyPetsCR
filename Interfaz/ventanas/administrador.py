@@ -1,6 +1,9 @@
 import sys
 from PyQt6.QtWidgets import QMainWindow, QWidget
 from PyQt6 import uic
+
+from .Citas import VentanaCitasAdmi
+from .registrarUsuario import FormularioRegistro
 from .ProductosTienda import ProductosTienda
 
 #se usa este archivo para manejar la parte de la interfaz del administrador pq la otra no estaba sirviendo para nada :))
