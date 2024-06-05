@@ -1,9 +1,7 @@
 
 from PyQt6 import QtWidgets, QtGui, uic
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout
-from PyQt6.QtGui import QStandardItemModel, QStandardItem
-
-from Interfaz.ventanas.HistorialCompras import HistorialCompras
+from .HistorialCompras import HistorialCompras
 from .Login import Login
 import os
 import json
@@ -210,8 +208,9 @@ class Tienda(QtWidgets.QWidget):
             'Total': product.precio,
             'Estado': 'Completado'
         }
-    historial_compras = HistorialCompras()
-    historial_compras.actualizar_historial(nueva_compra) # Revisar
+        historial_compras = HistorialCompras()
+        historial_compras.actualizar_historial(nueva_compra) # Revisar
+
     def showWarningMessage(self, message):
         msg_box = QMessageBox()
         msg_box.setText(message)

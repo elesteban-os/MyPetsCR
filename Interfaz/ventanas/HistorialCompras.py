@@ -46,7 +46,8 @@ class HistorialCompras(QMainWindow):
         self.cargar_historial()
 
 if __name__ == "__main__":
+    import sys
     app = QApplication(sys.argv)
-    ventana_historial = HistorialCompras()
-    ventana_historial.show()
+    window = HistorialCompras()
+    window.show()
     sys.exit(app.exec())
