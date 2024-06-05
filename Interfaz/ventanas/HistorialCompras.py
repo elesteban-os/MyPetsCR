@@ -1,6 +1,8 @@
 import json
+import sys
+
 from PyQt6 import QtWidgets, uic
-from PyQt6.QtWidgets import QMessageBox
+from PyQt6.QtWidgets import QMessageBox, QApplication
 from PyQt6.QtGui import QPixmap
 
 class HistorialCompras(QtWidgets.QWidget):
@@ -42,3 +44,8 @@ class HistorialCompras(QtWidgets.QWidget):
             json.dump(data, file, ensure_ascii=False, indent=4)
 
         self.cargar_historial()
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    ventana_historial = HistorialCompras()
+    ventana_historial.show()
+    sys.exit(app.exec())
