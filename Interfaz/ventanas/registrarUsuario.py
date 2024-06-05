@@ -11,7 +11,7 @@ class FormularioRegistro(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.parent_window = parent
-        uic.loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana7.ui", self)
+        uic.loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana6.ui", self)
 
        # self.pushButton.clicked.connect(self.registrar_cliente)
         self.pushButton_2.clicked.connect(self.volver_a_pagina_administrador)
@@ -19,7 +19,6 @@ class FormularioRegistro(QMainWindow):
         self.initialize_comboBox_tipo_usuario()
         self.pushButton = self.findChild(QPushButton, "pushButton")
         self.pushButton.clicked.connect(self.register_user)
-
 
 
     # Botón para abrir la ventana de mostrar datos
