@@ -17,7 +17,11 @@ class AdministradorWindow(QMainWindow):
         self.pushButton.clicked.connect(self.miau)
         self.pushButton_9.clicked.connect(self.close_and_return)
         self.pushButton_1.clicked.connect(self.abrir_ventana_administrador)
-
+        self.pushButton_7.clicked.connect(self.HistorialFacturaciones)
+    
+    def HistorialFacturaciones(self):
+        self.historialcompras = HistorialCompras(self)
+        self.historialcompras.show()
     
     def abrir_ventana_administrador(self):
             self.formulario_registro = FormularioRegistro(self)
