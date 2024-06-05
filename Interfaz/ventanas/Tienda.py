@@ -2,6 +2,8 @@
 from PyQt6 import QtWidgets, QtGui, uic
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout
 from PyQt6.QtGui import QStandardItemModel, QStandardItem
+
+from Interfaz.ventanas.HistorialCompras import HistorialCompras
 from .Login import Login
 import os
 import json
@@ -189,7 +191,27 @@ class Tienda(QtWidgets.QWidget):
             self.updateCartLabel()
         else:
             self.showWarningMessage(f"No hay más stock disponible, pronto se hará restock!!")
-
+    def process_payment(self):
+        QMessageBox.information(self, "Pago Procesado", "El pago ha sido procesado con éxito.")
+        for producto in self.productos:
+            self.registrar_compra(producto)  # Registrar cada compra
+        self.productos.clear()
+        self.load_data(self.productos)
+        self.update_total()
+    def registrar_compra(self, product):
+        nueva_compra = {
+            'Factura': len(self.selected_products),  # Ejemplo: número de factura
+            'Fecha': '2024-06-03',  # Ejemplo: fecha de compra
+            'Cliente': 'Cliente Desconocido',  # Cambiar según el cliente
+            'Productos Comprados': [product.descripcion],
+            'Cantidad': 1,
+            'Subtotal': product.precio,
+            'Descuento': 0,
+            'Total': product.precio,
+            'Estado': 'Completado'
+        }
+    historial_compras = HistorialCompras()
+    historial_compras.actualizar_historial(nueva_compra) # Revisar
     def showWarningMessage(self, message):
         msg_box = QMessageBox()
         msg_box.setText(message)
