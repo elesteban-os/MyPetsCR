@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1185</width>
-    <height>803</height>
+    <width>1340</width>
+    <height>872</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
      <rect>
       <x>180</x>
       <y>0</y>
-      <width>391</width>
+      <width>501</width>
       <height>101</height>
      </rect>
     </property>
@@ -209,8 +209,8 @@ color: red;</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>40</y>
+      <x>740</x>
+      <y>30</y>
       <width>551</width>
       <height>51</height>
      </rect>
@@ -316,7 +316,7 @@ color: red;</string>
      <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Perfil Propietario y Masota </string>
+     <string>Perfil Propietario y Mascota </string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_7">
@@ -413,6 +413,33 @@ color: red;</string>
      <string>Venta de Productos</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonBuscarMascota">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>120</y>
+      <width>459</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Busqueda Mascota</string>
+    </property>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea_6">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>110</y>
+      <width>501</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>mdiArea_6</zorder>
    <zorder>mdiArea_11</zorder>
    <zorder>mdiArea_5</zorder>
    <zorder>mdiArea_4</zorder>
@@ -437,14 +464,15 @@ color: red;</string>
    <zorder>pushButton_6</zorder>
    <zorder>pushButton_1</zorder>
    <zorder>pushButton</zorder>
+   <zorder>pushButtonBuscarMascota</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1185</width>
-     <height>21</height>
+     <width>1340</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
