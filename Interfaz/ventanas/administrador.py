@@ -6,6 +6,8 @@ from .Citas import VentanaCitasAdmi
 from .registrarUsuario import FormularioRegistro
 from .ProductosTienda import ProductosTienda
 from .HistorialCompras import HistorialCompras
+from .RegistroMascota import RegistrarMascota
+from .BuscarMascota import BuscarMascota
 
 #se usa este archivo para manejar la parte de la interfaz del administrador pq la otra no estaba sirviendo para nada :))
 
