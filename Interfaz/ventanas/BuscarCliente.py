@@ -5,7 +5,7 @@ from PyQt6 import uic
 class BuscarCliente(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        uic.loadUi("BuscarCliente.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\BuscarCliente.ui", self)
         self.pushButton.clicked.connect(self.buscar_cliente)
         self.tableWidget.cellDoubleClicked.connect(self.seleccionar_cliente)
 
