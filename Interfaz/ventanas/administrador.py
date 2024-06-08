@@ -18,6 +18,18 @@ class AdministradorWindow(QMainWindow):
         self.pushButton_9.clicked.connect(self.close_and_return)
         self.pushButton_1.clicked.connect(self.abrir_ventana_administrador)
         self.pushButton_7.clicked.connect(self.HistorialFacturaciones)
+        self.pushButton_2.clicked.connect(self.registrarMascota)
+        self.pushButtonBuscarMascota.clicked.connect(self.BuscarMascota)
+    
+    
+    def BuscarMascota(self):
+        self.buscar_mascota = BuscarMascota(self)
+        self.buscar_mascota.show()
+
+    def registrarMascota(self):
+        self.registrar_mascota = RegistrarMascota(self)
+        self.registrar_mascota.show()
+    
     
     def HistorialFacturaciones(self):
         self.historialcompras = HistorialCompras(self)
