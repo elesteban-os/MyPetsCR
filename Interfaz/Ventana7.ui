@@ -439,6 +439,54 @@ color: red;</string>
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>620</y>
+      <width>459</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Expediente</string>
+    </property>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea_7">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>610</y>
+      <width>391</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>610</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Imagen3.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>mdiArea_6</zorder>
    <zorder>mdiArea_11</zorder>
    <zorder>mdiArea_5</zorder>
@@ -465,6 +513,9 @@ color: red;</string>
    <zorder>pushButton_1</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButtonBuscarMascota</zorder>
+   <zorder>mdiArea_7</zorder>
+   <zorder>pushButton_10</zorder>
+   <zorder>label_9</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
