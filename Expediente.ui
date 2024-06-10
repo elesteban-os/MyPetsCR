@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExpedienteDialog</class>
+ <widget class="QDialog" name="ExpedienteDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Expediente de la Mascota</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+      background-color: rgb(77, 115, 129);
+    }
+    QLabel {
+      font: 14pt &quot;MS Shell Dlg 2&quot;;
+      color: white;
+    }
+    QLineEdit {
+      font: 14pt &quot;MS Shell Dlg 2&quot;;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+    }
+    QPushButton {
+      font: 14pt &quot;MS Shell Dlg 2&quot;;
+      background-color: rgb(106, 90, 205);
+      border-radius: 20px;
+      color: white;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutTitulo">
+     <item>
+      <widget class="QLabel" name="labelTitulo">
+       <property name="styleSheet">
+        <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;; color: white;</string>
+       </property>
+       <property name="text">
+        <string>Expediente Digital</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelMiPet">
+       <property name="styleSheet">
+        <string notr="true">font: 24pt &quot;MS Shell Dlg 2&quot;; color: red;</string>
+       </property>
+       <property name="text">
+        <string>MiPet</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelFoto">
+       <property name="styleSheet">
+        <string notr="true">image: url(:/login/Imagen2.jpg);</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditBuscarNombre">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="placeholderText">
+        <string>Buscar mascota...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonBuscar">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Buscar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutNombre">
+     <item>
+      <widget class="QLabel" name="labelNombreText">
+       <property name="text">
+        <string>Nombre:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditNombre"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelEspecieText">
+       <property name="text">
+        <string>Especie:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditEspecie"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutEdad">
+     <item>
+      <widget class="QLabel" name="labelEdadText">
+       <property name="text">
+        <string>Raza:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditEdad"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelAlergiasText">
+       <property name="text">
+        <string>Edad:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditAlergias"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayoutHistorial">
+       <item>
+        <widget class="QLabel" name="labelHistorial">
+         <property name="text">
+          <string>Historial:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditPadecimientos"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelHistorialContent"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonAgregarEntrada">
+         <property name="text">
+          <string>Agregar Entrada</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonCerrar">
+         <property name="text">
+          <string>Cerrar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonGuardarCambios">
+         <property name="text">
+          <string>Guardar Cambios</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelPadecimientosText">
+       <property name="text">
+        <string>Alergias:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditNuevaEntrada"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
