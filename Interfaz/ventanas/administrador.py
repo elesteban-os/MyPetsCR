@@ -8,6 +8,8 @@ from .ProductosTienda import ProductosTienda
 from .HistorialCompras import HistorialCompras
 from .RegistroMascota import RegistrarMascota
 from .BuscarMascota import BuscarMascota
+from .NewExpe import ExpedienteDialog
+
 
 #se usa este archivo para manejar la parte de la interfaz del administrador pq la otra no estaba sirviendo para nada :))
 
@@ -22,8 +24,15 @@ class AdministradorWindow(QMainWindow):
         self.pushButton_7.clicked.connect(self.HistorialFacturaciones)
         self.pushButton_2.clicked.connect(self.registrarMascota)
         self.pushButtonBuscarMascota.clicked.connect(self.BuscarMascota)
+        
+        self.pushButton_10.clicked.connect(self.Expediente)
+        print("pushButton_10 connected")
     
     
+    def Expediente(self):
+        self.expediente_mascota = ExpedienteDialog()
+        self.expediente_mascota.show()
+        
     def BuscarMascota(self):
         self.buscar_mascota = BuscarMascota(self)
         self.buscar_mascota.show()
