@@ -8,7 +8,7 @@ import sqlite3
 class RegistrarMascota(QMainWindow):
     def __init__(self, main_window=None):
         super().__init__()
-        uic.loadUi("Ventana9.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Ventana9.ui", self)
 
         self.main_window = main_window
         self.pushButton.clicked.connect(self.registrar_mascota)
