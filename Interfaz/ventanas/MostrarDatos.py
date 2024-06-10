@@ -6,7 +6,7 @@ import sys
 class MostrarDatos(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("VentanaMostrarDatos.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\VentanaMostrarDatos.ui", self)
         
         # Botón para cerrar la ventana
         self.pushButtonCerrar = self.findChild(QPushButton, "pushButtonCerrar")
