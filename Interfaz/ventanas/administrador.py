@@ -4,10 +4,10 @@ from PyQt6 import uic
 
 from .Citas import VentanaCitasAdmi
 from .registrarUsuario import FormularioRegistro
-from .ProductosTienda import ProductosTienda
 from .HistorialCompras import HistorialCompras
 from .RegistroMascota import RegistrarMascota
 from .BuscarMascota import BuscarMascota
+from.EdiciónDeProductos import VentanaAdmin
 
 #se usa este archivo para manejar la parte de la interfaz del administrador pq la otra no estaba sirviendo para nada :))
 
@@ -40,6 +40,7 @@ class AdministradorWindow(QMainWindow):
     def abrir_ventana_administrador(self):
             self.formulario_registro = FormularioRegistro(self)
             self.formulario_registro.show()
+            
     def crear_cita(self):
         print("Crear cita")
 
@@ -48,8 +49,9 @@ class AdministradorWindow(QMainWindow):
          self.crear_cita.show()
         
     def productosTienda(self):
-        self.productos_window = ProductosTienda()
-        self.productos_window.show()
+        self.edicion_window = VentanaAdmin()
+        self.edicion_window.show()
+
         
     def close_and_return(self):
         if self.parent() is not None:

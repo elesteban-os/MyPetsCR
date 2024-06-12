@@ -1,7 +1,10 @@
 
+import logging
+import random
 from PyQt6 import QtWidgets, QtGui, uic
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout, QDialog
 from .HistorialCompras import HistorialCompras
+from datetime import datetime
 from .Login import Login
 import os
 import json
@@ -22,6 +25,12 @@ class Producto:
 
     def __str__(self):
         return f"{self.descripcion} ({self.marca}) - ${self.precio_final():.2f}"
+    
+    def to_dict(self):
+        return {
+            "nombre": self.descripcion,
+            "precio_final": self.precio + (self.precio * self.iva / 100)
+        }
 
 class ProductoItem(QWidget):
     def __init__(self, producto, remove_callback):
@@ -86,12 +95,128 @@ class ProductosListView(QWidget):
         self.load_data(self.productos)
         self.update_total()
 
+#aquí es donde tengo que agregar varas
     def process_payment(self):
-        QMessageBox.information(self, "Pago Procesado", "El pago ha sido procesado con éxito.")
-        self.productos.clear()
-        self.load_data(self.productos)
-        self.update_total()
+        self.procesar_window = ProcesarPagos(self.productos)
+        self.procesar_window.show()
 
+class MetodosPagoWidget(QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\MetodosPago.ui", self)
+
+#esta clase es para procesar los pagos que se realizan
+class ProcesarPagos(QWidget):
+    def __init__(self, productos):
+        super().__init__()
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\ProcesarPagos.ui", self)
+        self.productos = productos
+        self.update_subtotal()
+        self.pushButton.clicked.connect(self.tarjeta_selection)
+        self.checkBox.stateChanged.connect(self.on_checkbox_state_changed)
+        self.pushButton_2.clicked.connect(self.otros_metodos)
+    def update_subtotal(self):
+        subtotal_amount = sum(producto.precio_final() for producto in self.productos)
+        self.label_19.setText(f"₡{subtotal_amount:.2f}")
+
+    def update_total(self):
+        subtotal_text = self.label_19.text().replace("₡", "")
+        subtotal_amount = float(subtotal_text)
+        total_amount = subtotal_amount + 4500  # Sumar el monto de envío
+        self.label_23.setText(f"Total: ₡{total_amount:.2f}")
+
+    def otros_metodos(self):
+        metodos_pago_widget = MetodosPagoWidget(self)
+        metodos_pago_widget.show()
+
+    def on_checkbox_state_changed(self):
+        if self.checkBox.isChecked():
+            self.label_21.setText("₡4500")
+            self.update_total()
+
+        else:
+            self.label_23.setText(self.label_19.text())
+            self.label_21.setText("₡0")
+
+    def validar_numero_tarjeta(numero):
+        try:
+            int(numero)  # Intenta convertir el valor a entero
+            return True
+        except ValueError:
+            return False
+
+    def tarjeta_selection(self):
+        nombre = self.lineEdit_2.text()
+        numeroDtarjeta = self.lineEdit.text()
+
+        # Validar el número de tarjeta
+        if not ProcesarPagos.validar_numero_tarjeta(numeroDtarjeta):
+            QMessageBox.information(self, "Error", "Verifique bien sus datos")
+            return  # Salir de la función si la validación falla
+        vencimiento_tarjeta = self.comboBox.currentText() + "/" + self.comboBox_2.currentText()
+        correo = self.lineEdit_4.text()
+        ccv = self.lineEdit_3.text()
+        direccion = self.lineEdit_7.text()
+        provincia = self.lineEdit_8.text()
+        canton = self.lineEdit_9.text()
+        distrito = self.lineEdit_10.text()
+        codigo_postal = self.lineEdit_12.text()
+        numero = self.lineEdit_12.text()
+        nombre_completo = self.lineEdit_5.text() + " " + self.lineEdit_6.text()
+
+        if self.checkBox.isChecked(): 
+            required_fields = [nombre, numeroDtarjeta, correo, vencimiento_tarjeta, ccv]     
+        else:
+            required_fields = [nombre, numeroDtarjeta, correo, vencimiento_tarjeta, ccv, direccion, provincia, canton, distrito, codigo_postal, numero, nombre_completo]
+        if not all(required_fields):
+            self.show_message("Completa todos los campos requeridos", "Error")
+            return
+
+        now = datetime.now()
+        fecha_hora = now.strftime("%Y-%m-%d %H:%M:%S")
+        numero_transaccion = random.randint(1000000, 9999999)
+        articulos_comprados = [producto.to_dict() for producto in self.productos]
+
+        # Crear el diccionario con los datos
+        data = {
+            "nombre": nombre,
+            "correo": correo,
+            "hora": fecha_hora,
+            "numero_transaccion": numero_transaccion,
+            "total": self.label_23.text(),
+            "articulos_comprados": articulos_comprados
+        }
+        
+        json_path = "C:/Datos1_Proyecto1/MyPetsCR/Interfaz/ComprasClientes.json"
+        try:
+            if os.path.exists(json_path):
+                with open(json_path, "r", encoding='utf-8') as json_file:
+                    existing_data = json.load(json_file)
+            else:
+                existing_data = []
+
+            existing_data.append(data)
+
+            with open(json_path, "w", encoding='utf-8') as json_file:
+                json.dump(existing_data, json_file, indent=4, ensure_ascii=False)
+
+            self.show_message("Su pago fue procesado", "Pago Procesado")
+        except Exception as e:
+            logging.error(f"Error while writing purchase data: {e}")
+
+
+    def show_message(self, message, title):
+        QMessageBox.information(self, title, message)      
+        
+    def show_Errormessage(self, message, title):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Icon.Information)
+        msg.setText(message)
+        msg.setWindowTitle(title)
+        msg.setStandardButtons(QMessageBox.StandardButton.Ok)
+        msg.exec()
+
+#CLASE PRINCIPAL
 class Tienda(QtWidgets.QWidget):
     def __init__(self, main_window):
         super().__init__()
@@ -189,6 +314,7 @@ class Tienda(QtWidgets.QWidget):
             self.updateCartLabel()
         else:
             self.showWarningMessage(f"No hay más stock disponible, pronto se hará restock!!")
+
     def process_payment(self):
         QMessageBox.information(self, "Pago Procesado", "El pago ha sido procesado con éxito.")
         for producto in self.productos:
@@ -196,6 +322,7 @@ class Tienda(QtWidgets.QWidget):
         self.productos.clear()
         self.load_data(self.productos)
         self.update_total()
+
     def registrar_compra(self, product):
         nueva_compra = {
             'Factura': len(self.selected_products),  # Ejemplo: número de factura

@@ -1,0 +1,91 @@
+[
+    {
+        "nombre": "gdahjgasd",
+        "correo": "jdhgsjgdjkgasdg",
+        "hora": "2024-06-11 19:38:57",
+        "numero_transaccion": 6497369
+    },
+    {
+        "nombre": "iuwherfh",
+        "correo": "feweqwqe",
+        "hora": "2024-06-11 19:48:19",
+        "numero_transaccion": 9050709,
+        "total": "Total: ₡4788.78",
+        "articulos_comprados": [
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Arnés ajustable para perros medianos",
+                "precio_final": 21.244
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            }
+        ]
+    },
+    {
+        "nombre": "iuytiupedia",
+        "correo": "ashjdklhdsa",
+        "hora": "2024-06-11 19:57:50",
+        "numero_transaccion": 5687030,
+        "total": "₡4873.11",
+        "articulos_comprados": [
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Rascador para gatos de cartón, 45 cm",
+                "precio_final": 74.9868
+            },
+            {
+                "nombre": "Arnés ajustable para perros medianos",
+                "precio_final": 21.244
+            },
+            {
+                "nombre": "Arnés ajustable para perros medianos",
+                "precio_final": 21.244
+            }
+        ]
+    },
+    {
+        "nombre": "uhyifreha",
+        "correo": "f32r1343 ",
+        "hora": "2024-06-11 20:03:22",
+        "numero_transaccion": 9848913,
+        "total": "Total: ₡4846.19",
+        "articulos_comprados": [
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Rascador para gatos de cartón, 45 cm",
+                "precio_final": 74.9868
+            }
+        ]
+    }
+]
