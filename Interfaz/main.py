@@ -1,7 +1,6 @@
 
 import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow
-from Interfaz.ventanas.Citas import VentanaCitasAdmi
 from Interfaz.ventanas.admicitas import AdmicitasWindow
 from ventanas.Login import Login
 from ventanas.registro import RegistrarUsuario
@@ -18,7 +17,6 @@ class MainWindow(QMainWindow):
         self.cliente_window = ClienteWindow()
         self.administrador_window = AdministradorWindow()
         self.veterinario_window = VeterinarioWindow()
-        self.admicitas_window = AdmicitasWindow()
         self.show_inicio_window()
 
     def show_inicio_window(self):
@@ -39,8 +37,6 @@ class MainWindow(QMainWindow):
     def show_veterinario_window(self):
         self.veterinario_window.show()
         
-    def show_Citas_Admi_window(self):
-        self.admicitas_window.show()
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
