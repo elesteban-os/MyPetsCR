@@ -28,6 +28,8 @@ class Database:
                 raza TEXT,
                 edad INTEGER,
                 id_cliente INTEGER,
+                alergias TEXT,
+                padecimientos TEXT,
                 FOREIGN KEY (id_cliente) REFERENCES clientes(id)
             )
         ''')
@@ -56,10 +58,36 @@ class Database:
                 FOREIGN KEY (id_veterinario) REFERENCES personas(id)
             )
         ''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS expedientes (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id_mascota INTEGER,
+                nombre TEXT,
+                especie TEXT,
+                raza TEXT,
+                edad INTEGER,
+                alergias TEXT,
+                padecimientos TEXT,
+                historial TEXT,
+                FOREIGN KEY (id_mascota) REFERENCES mascotas(id)
+            )
+        ''')
+
+        # Comprobar si las columnas existen antes de intentar agregarlas
+        self.agregar_columna_si_no_existe('mascotas', 'alergias', 'TEXT')
+        self.agregar_columna_si_no_existe('mascotas', 'padecimientos', 'TEXT')
+
         self.conn.commit()
+
+    def agregar_columna_si_no_existe(self, table_name, column_name, column_type):
+        self.cursor.execute(f"PRAGMA table_info({table_name})")
+        columns = [col[1] for col in self.cursor.fetchall()]
+        if column_name not in columns:
+            self.cursor.execute(f"ALTER TABLE {table_name} ADD COLUMN {column_name} {column_type}")
 
     def close(self):
         self.conn.close()
+
 
 class InsertarBaseDatos:
     def __init__(self, db_name="veterinaria.db"):
@@ -130,5 +158,6 @@ if __name__ == "__main__":
     # Insertar datos iniciales
     insercion = InsertarBaseDatos()
     insercion.insertar_datos_iniciales()
+
 
 
