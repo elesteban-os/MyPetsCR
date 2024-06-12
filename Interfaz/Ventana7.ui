@@ -332,7 +332,7 @@ color: red;</string>
      <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Facturaciones </string>
+     <string>Historial Facturaciones Clientes </string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_6">
@@ -487,6 +487,33 @@ color: red;</string>
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>530</y>
+      <width>459</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Crear Facturaciones Veterinaria</string>
+    </property>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea_13">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>520</y>
+      <width>371</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>mdiArea_13</zorder>
    <zorder>mdiArea_6</zorder>
    <zorder>mdiArea_11</zorder>
    <zorder>mdiArea_5</zorder>
@@ -516,6 +543,7 @@ color: red;</string>
    <zorder>mdiArea_7</zorder>
    <zorder>pushButton_10</zorder>
    <zorder>label_9</zorder>
+   <zorder>pushButton_11</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
