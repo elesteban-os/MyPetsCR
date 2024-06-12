@@ -6,11 +6,11 @@ from PyQt6.QtWidgets import QApplication, QMainWindow
 class HistorialCompras(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
-        uic.loadUi("C:/Datos1_Proyecto1/MyPetsCR/Interfaz/HistorialdeFacturacionesVeterinaria.ui", self)
+        uic.loadUi("HistorialdeFacturacionesVeterinaria.ui", self)
         self.cargar_historial()
 
     def cargar_historial(self):
-        json_file_path = r"C:/Datos1_Proyecto1/MyPetsCR/Interfaz/Historial_Compras.json"
+        json_file_path = r"C:\Users\Meibel\Downloads\MyPetsCR-main (1)\MyPetsCR-main\Interfaz\Historial_Compras.json"
         try:
             with open(json_file_path, 'r', encoding='utf-8') as file:
                 data = json.load(file)
@@ -32,7 +32,7 @@ class HistorialCompras(QMainWindow):
             self.tableWidget_2.setItem(row, 8, QtWidgets.QTableWidgetItem(compra['Estado']))
 
     def actualizar_historial(self, nueva_compra):
-        json_file_path = r"C:/Datos1_Proyecto1/MyPetsCR/Interfaz/Historial_Compras.json"
+        json_file_path = r"C:\Users\Meibel\Downloads\MyPetsCR-main (1)\MyPetsCR-main\Interfaz\Historial_Compras.json"
         try:
             with open(json_file_path, 'r', encoding='utf-8') as file:
                 data = json.load(file)
@@ -51,3 +51,6 @@ if __name__ == "__main__":
     window = HistorialCompras()
     window.show()
     sys.exit(app.exec())
+
+
+
