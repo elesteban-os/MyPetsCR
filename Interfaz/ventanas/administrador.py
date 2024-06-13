@@ -2,12 +2,14 @@ import sys
 from PyQt6.QtWidgets import QMainWindow, QWidget
 from PyQt6 import uic
 
-from .Citas import VentanaCitasAdmi
+from .Citas_Admi import MainWindow
 from .registrarUsuario import FormularioRegistro
+from .ProductosTienda import ProductosTienda
 from .HistorialCompras import HistorialCompras
 from .RegistroMascota import RegistrarMascota
 from .BuscarMascota import BuscarMascota
 from .NewExpe import ExpedienteDialog
+from .HistorialComprasAdmi import HistorialComprasAdmi
 
 
 #se usa este archivo para manejar la parte de la interfaz del administrador pq la otra no estaba sirviendo para nada :))
@@ -27,7 +29,12 @@ class AdministradorWindow(QMainWindow):
         self.pushButton_10.clicked.connect(self.Expediente)
         print("pushButton_10 connected")
     
+        self.pushButton_11.clicked.connect(self.CrearFacturaciones)
     
+    def CrearFacturaciones(self):
+        self.crear_facturacion = HistorialComprasAdmi()
+        self.crear_facturacion.show()
+
     def Expediente(self):
         self.expediente_mascota = ExpedienteDialog()
         self.expediente_mascota.show()
@@ -53,8 +60,8 @@ class AdministradorWindow(QMainWindow):
         print("Crear cita")
 
     def crear_cita(self):
-         self.crear_cita = VentanaCitasAdmi()
-         self.crear_cita.show()
+        self.crear_cita = MainWindow()
+        self.crear_cita.show()
         
     def productosTienda(self):
         self.edicion_window = VentanaAdmin()
