@@ -257,6 +257,33 @@ color: red;</string>
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="push_Button_BuscarMascota">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>150</y>
+      <width>261</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Buscar Mascota</string>
+    </property>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea_8">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>140</y>
+      <width>311</width>
+      <height>71</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>mdiArea_8</zorder>
    <zorder>mdiArea_7</zorder>
    <zorder>mdiArea_6</zorder>
    <zorder>mdiArea_5</zorder>
@@ -273,6 +300,7 @@ color: red;</string>
    <zorder>label_8</zorder>
    <zorder>label_10</zorder>
    <zorder>label_2</zorder>
+   <zorder>push_Button_BuscarMascota</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
