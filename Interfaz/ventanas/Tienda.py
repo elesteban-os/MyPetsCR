@@ -3,7 +3,7 @@ import logging
 import random
 from PyQt6.QtCore import pyqtSignal
 from PyQt6 import QtWidgets, QtGui, uic
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout, QDialog
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout
 from .HistorialCompras import HistorialCompras
 from datetime import datetime
 from .Login import Login
@@ -245,7 +245,7 @@ class Tienda(QtWidgets.QWidget):
         self.tableWidget.setColumnWidth(2, 80)
         self.tableWidget.setColumnWidth(3, 100)
         self.tableWidget.setColumnWidth(4, 100)
-        self.productos = []  # Inicializar la lista de productos
+        self.productos = [] 
         self.loaddata()
 
         self.image = QtWidgets.QLabel(self)

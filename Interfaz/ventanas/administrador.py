@@ -1,16 +1,15 @@
-import sys
-from PyQt6.QtWidgets import QMainWindow, QWidget
+from PyQt6.QtWidgets import QMainWindow
 from PyQt6 import uic
 
 from .Citas_Admi import MainWindow
 from .registrarUsuario import FormularioRegistro
-from .ProductosTienda import ProductosTienda
+from.EdiciónDeProductos import VentanaAdmin
 from .HistorialCompras import HistorialCompras
 from .RegistroMascota import RegistrarMascota
 from .BuscarMascota import BuscarMascota
 from .NewExpe import ExpedienteDialog
 from .HistorialComprasAdmi import HistorialComprasAdmi
-
+from .Facturacion import Facturacion
 
 #se usa este archivo para manejar la parte de la interfaz del administrador pq la otra no estaba sirviendo para nada :))
 
@@ -25,6 +24,7 @@ class AdministradorWindow(QMainWindow):
         self.pushButton_7.clicked.connect(self.HistorialFacturaciones)
         self.pushButton_2.clicked.connect(self.registrarMascota)
         self.pushButtonBuscarMascota.clicked.connect(self.BuscarMascota)
+        self.pushButton_6.clicked.connect(self.facturacion)
         
         self.pushButton_10.clicked.connect(self.Expediente)
         print("pushButton_10 connected")
@@ -46,8 +46,7 @@ class AdministradorWindow(QMainWindow):
     def registrarMascota(self):
         self.registrar_mascota = RegistrarMascota(self)
         self.registrar_mascota.show()
-    
-    
+
     def HistorialFacturaciones(self):
         self.historialcompras = HistorialCompras(self)
         self.historialcompras.show()
@@ -66,10 +65,12 @@ class AdministradorWindow(QMainWindow):
     def productosTienda(self):
         self.edicion_window = VentanaAdmin()
         self.edicion_window.show()
-
         
+    def facturacion(self):
+        self.facturacion_window = Facturacion()
+        self.facturacion_window.show()
+
     def close_and_return(self):
         if self.parent() is not None:
             self.parent().show()
         self.close() 
-

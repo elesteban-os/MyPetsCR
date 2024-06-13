@@ -348,7 +348,7 @@ color: red;</string>
      <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Edición de Promociones de Productos</string>
+     <string>Facturación</string>
     </property>
    </widget>
    <widget class="QMdiArea" name="mdiArea_10">
@@ -551,7 +551,7 @@ color: red;</string>
      <x>0</x>
      <y>0</y>
      <width>1340</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

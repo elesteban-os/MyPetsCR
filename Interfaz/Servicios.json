@@ -1,0 +1,157 @@
+[   {
+        "Código": "SERV01",
+        "Descripción": "Consulta general y especializada",
+        "Costo": 65,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV02",
+        "Descripción": "Hospitalización",
+        "Costo": 140,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV03",
+        "Descripción": "Cirugía",
+        "Costo": 220,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV04",
+        "Descripción": "Ultrasonido",
+        "Costo": 160,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV05",
+        "Descripción": "Fisioterapia",
+        "Costo": 150,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV06",
+        "Descripción": "Ortopedía",
+        "Costo": 130,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV07",
+        "Descripción": "Radiología",
+        "Costo": 162,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV08",
+        "Descripción": "Limpieza Dental",
+        "Costo": 66,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV09",
+        "Descripción": "Electrodiagrama",
+        "Costo": 100,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV10",
+        "Descripción": "Hospedaje",
+        "Costo": 51,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV11",
+        "Descripción": "Grooming",
+        "Costo": 42,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV12",
+        "Descripción": "Microchip",
+        "Costo": 340,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV13",
+        "Descripción": "Laboratorio",
+        "Costo": 180,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV14",
+        "Descripción": "Gallofos-B12",
+        "Costo": 20,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV15",
+        "Descripción": "Hemafor-T",
+        "Costo": 11,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV16",
+        "Descripción": "Hematofos-B12",
+        "Costo": 13,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV17",
+        "Descripción": "Hidrat-Race",
+        "Costo": 9,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV18",
+        "Descripción": "Benzatard",
+        "Costo": 8.54,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV19",
+        "Descripción": "Baytril 5%",
+        "Costo": 9.13,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV20",
+        "Descripción": "Marbocyl-fd 1%",
+        "Costo": 12,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV21",
+        "Descripción": "Calfortis",
+        "Costo": 10.33,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV22",
+        "Descripción": "Ferromycin",
+        "Costo": 8.43,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV23",
+        "Descripción": "Kinodyl-Se",
+        "Costo": 12.11,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV24",
+        "Descripción": "Iron-Dex200-B12",
+        "Costo": 13,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV25",
+        "Descripción": "Hepato-Ject-Heprotect",
+        "Costo": 19,
+        "IVA": 13
+    },
+    {
+        "Código": "SERV26",
+        "Descripción": "Hematofos B12-NF",
+        "Costo": 22,
+        "IVA": 13
+    }
+]
