@@ -53,6 +53,8 @@ class ProductoItem(QWidget):
     def remove_item(self):
         self.remove_callback(self.producto)
 
+#esta clase de carrito y la clase de Procesar Pagos son las más importantes para lo de pagos
+#esta clase es para ver el carrito, aquí se muestran las cosillas y se redirecciona a la ventana de Procesar Pagos
 class ProductosListView(QWidget):
     def __init__(self, productos, remove_callback, update_cart_label_callback):
         super().__init__()
@@ -110,12 +112,16 @@ class ProductosListView(QWidget):
         self.update_total()
         self.update_cart_label_callback() 
 
+#esta clase tengo que cambiarla, es solo para cuando los pagos son por transferencia o sinpe 
+#entonces lo que pensaba hacer era que nada más se mostrara una ventana con información del numero de cuenta al que depositar y el numero de sinpe y que pasaran el comprobante de pago a ese numero
+#solo es como una ventana de info, se puede usar esta y yo agrego la info ya casi
 class MetodosPagoWidget(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\MetodosPago.ui", self)
 
 #esta clase es para procesar los pagos que se realizan
+#es la ventana donde se añaden los datos de la compra al json y así
 class ProcesarPagos(QWidget):
     payment_processed = pyqtSignal()
     def __init__(self, productos):
@@ -126,21 +132,25 @@ class ProcesarPagos(QWidget):
         self.pushButton.clicked.connect(self.tarjeta_selection)
         self.checkBox.stateChanged.connect(self.on_checkbox_state_changed)
         self.pushButton_2.clicked.connect(self.otros_metodos)
-        
+    
+    #el subtotal que se toma del carrito
     def update_subtotal(self):
         subtotal_amount = sum(producto.precio_final() for producto in self.productos)
         self.label_19.setText(f"₡{subtotal_amount:.2f}")
 
+    #esto es pq se cobra un total con envio
     def update_total(self):
         subtotal_text = self.label_19.text().replace("₡", "")
         subtotal_amount = float(subtotal_text)
         total_amount = subtotal_amount + 4500  # Sumar el monto de envío
         self.label_23.setText(f"Total: ₡{total_amount:.2f}")
 
+    #esta es la que llama a la cosa de otros metodos de pago
     def otros_metodos(self):
         metodos_pago_widget = MetodosPagoWidget(self)
         metodos_pago_widget.show()
 
+    #esto es para que se cambie el precio si se toca el check o no
     def on_checkbox_state_changed(self):
         if self.checkBox.isChecked():
             self.label_23.setText(self.label_19.text())
@@ -150,6 +160,9 @@ class ProcesarPagos(QWidget):
             self.label_21.setText("₡4500")
             self.update_total()
 
+    #solo deja poner numeros en el numero de tarjeta
+    #me falta tambien validar algunos otros campos pero eso es facil
+    #cuando lo tenga lo subo y se lo puedes añadir a lo otro
     def validar_numero_tarjeta(numero):
         try:
             int(numero)  # Intenta convertir el valor a entero
@@ -165,6 +178,8 @@ class ProcesarPagos(QWidget):
         if not ProcesarPagos.validar_numero_tarjeta(numeroDtarjeta):
             QMessageBox.information(self, "Error", "Verifique bien sus datos")
             return  # Salir de la función si la validación falla
+        
+        #todo esto son los campos que se toman cuando se escribe
         vencimiento_tarjeta = self.comboBox.currentText() + "/" + self.comboBox_2.currentText()
         correo = self.lineEdit_4.text()
         ccv = self.lineEdit_3.text()
@@ -176,6 +191,8 @@ class ProcesarPagos(QWidget):
         numero = self.lineEdit_12.text()
         nombre_completo = self.lineEdit_5.text() + " " + self.lineEdit_6.text()
 
+        #que solo pueda procesar si completa ciertos campos según si quiere entrega en tienda o así
+        #creo que tengo que añadir tambien como en q tienda quiere que se haga pero aún estoy viendo si se necesita o no
         if self.checkBox.isChecked(): 
             required_fields = [nombre, numeroDtarjeta, correo, vencimiento_tarjeta, ccv]     
         else:
@@ -189,7 +206,7 @@ class ProcesarPagos(QWidget):
         numero_transaccion = random.randint(1000000, 9999999)
         articulos_comprados = [producto.to_dict() for producto in self.productos]
 
-        # Crear el diccionario con los datos
+        # Crear el diccionario con los datos para escribirlos en el json
         data = {
             "nombre": nombre,
             "correo": correo,
@@ -198,7 +215,8 @@ class ProcesarPagos(QWidget):
             "total": self.label_23.text(),
             "articulos_comprados": articulos_comprados
         }
-        
+
+        #escribir en el json
         json_path = "C:/Datos1_Proyecto1/MyPetsCR/Interfaz/ComprasClientes.json"
         try:
             if os.path.exists(json_path):
@@ -219,10 +237,10 @@ class ProcesarPagos(QWidget):
         except Exception as e:
             logging.error(f"Error while writing purchase data: {e}")
 
-
+    #mensaje de info
     def show_message(self, message, title):
         QMessageBox.information(self, title, message)      
-        
+    #mensaje de error
     def show_Errormessage(self, message, title):
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Icon.Information)
