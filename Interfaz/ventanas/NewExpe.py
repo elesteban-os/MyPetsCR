@@ -6,7 +6,7 @@ import sys
 class ExpedienteDialog(QDialog):
     def __init__(self):
         super().__init__()
-        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\NewExpediente.ui", self)
+        uic.loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\NewExpediente.ui", self)
 
         self.pushButton.clicked.connect(self.guardar_cambios)
         self.pushButtonMostrarDatos.clicked.connect(self.cargar_datos)

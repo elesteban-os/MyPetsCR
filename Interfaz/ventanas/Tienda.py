@@ -1,6 +1,7 @@
 
 import logging
 import random
+from PyQt6.QtCore import pyqtSignal
 from PyQt6 import QtWidgets, QtGui, uic
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessageBox, QListWidget, QVBoxLayout, QListWidgetItem, QHBoxLayout, QDialog
 from .HistorialCompras import HistorialCompras
@@ -53,11 +54,12 @@ class ProductoItem(QWidget):
         self.remove_callback(self.producto)
 
 class ProductosListView(QWidget):
-    def __init__(self, productos, remove_callback):
+    def __init__(self, productos, remove_callback, update_cart_label_callback):
         super().__init__()
         self.setWindowTitle("Lista de Productos Seleccionados")
         self.setGeometry(100, 100, 600, 400)
         self.remove_callback = remove_callback
+        self.update_cart_label_callback = update_cart_label_callback
 
         layout = QVBoxLayout()
 
@@ -75,6 +77,18 @@ class ProductosListView(QWidget):
 
         self.setLayout(layout)
         self.update_total()
+
+    def process_payment(self):
+        self.procesar_window = ProcesarPagos(self.productos)
+        self.procesar_window.payment_processed.connect(self.on_payment_processed)
+        self.procesar_window.show()
+
+    def on_payment_processed(self):
+        self.productos.clear()
+        self.load_data(self.productos)
+        self.update_total()
+        self.update_cart_label_callback()  # Update cart label
+        self.close()
 
     def load_data(self, productos):
         self.productos = productos
@@ -94,11 +108,7 @@ class ProductosListView(QWidget):
         self.productos.remove(producto)
         self.load_data(self.productos)
         self.update_total()
-
-#aquí es donde tengo que agregar varas
-    def process_payment(self):
-        self.procesar_window = ProcesarPagos(self.productos)
-        self.procesar_window.show()
+        self.update_cart_label_callback() 
 
 class MetodosPagoWidget(QWidget):
     def __init__(self, parent=None):
@@ -107,6 +117,7 @@ class MetodosPagoWidget(QWidget):
 
 #esta clase es para procesar los pagos que se realizan
 class ProcesarPagos(QWidget):
+    payment_processed = pyqtSignal()
     def __init__(self, productos):
         super().__init__()
         uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\ProcesarPagos.ui", self)
@@ -115,6 +126,7 @@ class ProcesarPagos(QWidget):
         self.pushButton.clicked.connect(self.tarjeta_selection)
         self.checkBox.stateChanged.connect(self.on_checkbox_state_changed)
         self.pushButton_2.clicked.connect(self.otros_metodos)
+        
     def update_subtotal(self):
         subtotal_amount = sum(producto.precio_final() for producto in self.productos)
         self.label_19.setText(f"₡{subtotal_amount:.2f}")
@@ -131,12 +143,12 @@ class ProcesarPagos(QWidget):
 
     def on_checkbox_state_changed(self):
         if self.checkBox.isChecked():
-            self.label_21.setText("₡4500")
-            self.update_total()
-
-        else:
             self.label_23.setText(self.label_19.text())
             self.label_21.setText("₡0")
+
+        else:      
+            self.label_21.setText("₡4500")
+            self.update_total()
 
     def validar_numero_tarjeta(numero):
         try:
@@ -201,6 +213,9 @@ class ProcesarPagos(QWidget):
                 json.dump(existing_data, json_file, indent=4, ensure_ascii=False)
 
             self.show_message("Su pago fue procesado", "Pago Procesado")
+            self.payment_processed.emit()  # Emitir la señal aquí
+            self.close()
+            
         except Exception as e:
             logging.error(f"Error while writing purchase data: {e}")
 
@@ -262,7 +277,7 @@ class Tienda(QtWidgets.QWidget):
 
     def show_selected_productos_list(self):
         if self.selected_products:
-            self.productos_list = ProductosListView(self.selected_products, self.remove_product_from_selected)
+            self.productos_list = ProductosListView(self.selected_products, self.remove_product_from_selected, self.updateCartLabel)
             self.productos_list.show()
         else:
             self.showWarningMessage("No hay productos seleccionados.")

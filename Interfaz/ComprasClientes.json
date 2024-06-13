@@ -87,5 +87,158 @@
                 "precio_final": 74.9868
             }
         ]
+    },
+    {
+        "nombre": "KJFSHNKÑHDS",
+        "correo": "DJHASÑHASSAJD",
+        "hora": "2024-06-12 00:27:25",
+        "numero_transaccion": 1566063,
+        "total": "₡457.19",
+        "articulos_comprados": [
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            }
+        ]
+    },
+    {
+        "nombre": " vvmnvb",
+        "correo": "jhvgjbgjb,",
+        "hora": "2024-06-12 21:25:56",
+        "numero_transaccion": 6645079,
+        "total": "₡643.17",
+        "articulos_comprados": [
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            }
+        ]
+    },
+    {
+        "nombre": "ghfdrfg",
+        "correo": "rtvgxd",
+        "hora": "2024-06-12 21:33:14",
+        "numero_transaccion": 8598788,
+        "total": "₡358.82",
+        "articulos_comprados": [
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 82.2979
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 82.2979
+            }
+        ]
+    },
+    {
+        "nombre": "iughhjlksdh",
+        "correo": "shdñkjahdhsa",
+        "hora": "2024-06-12 21:52:20",
+        "numero_transaccion": 9095759,
+        "total": "₡512.78",
+        "articulos_comprados": [
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 82.2979
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Rascador para gatos de cartón, 45 cm",
+                "precio_final": 74.9868
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            }
+        ]
+    },
+    {
+        "nombre": "kljfkldjljklsf",
+        "correo": "hajkshdlksa",
+        "hora": "2024-06-12 21:52:51",
+        "numero_transaccion": 8645410,
+        "total": "₡450.61",
+        "articulos_comprados": [
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 82.2979
+            },
+            {
+                "nombre": "Pienso para conejos, 1 kg",
+                "precio_final": 88.87450000000001
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            }
+        ]
     }
 ]
