@@ -1,0 +1,93 @@
+[
+    {
+        "Producto": "Alimento húmedo para gatos, sabor atún, 500 g",
+        "Nombre": "Laura M.",
+        "Comentario": "A mi gato le encanta este alimento. Siempre lo devora en minutos.",
+        "Calificación": "★★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\1.jpg"
+    },
+    {
+        "Producto": "Pienso para conejos, 1 kg",
+        "Nombre": "Carlos R.",
+        "Comentario": "Buen producto, pero mi conejo no parece disfrutarlo tanto.",
+        "Calificación": "★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\3.jpg"
+    },
+    {
+        "Producto": "Pelota resistente para perros, 10 cm de diámetro",
+        "Nombre": "Ana P.",
+        "Comentario": "Mi perro juega con esta pelota todo el día. Muy duradera.",
+        "Calificación": "★★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\4.jpg"
+    },
+    {
+        "Producto": "Bandeja sanitaria para gatos, 50x40 cm",
+        "Nombre": "Marta L.",
+        "Comentario": "Buen tamaño y fácil de limpiar. Recomendado.",
+        "Calificación": "★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\5.jpg"
+    },
+    {
+        "Producto": "Rascador para gatos de cartón, 45 cm",
+        "Nombre": "Sergio G.",
+        "Comentario": "A mi gato le gusta, pero se desgasta rápidamente.",
+        "Calificación": "★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\33.jpg"
+    },
+    {
+        "Producto": "Arnés ajustable para perros medianos",
+        "Nombre": "Lucía V.",
+        "Comentario": "Perfecto para pasear a mi perro. Muy cómodo y seguro.",
+        "Calificación": "★★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\7.jpg"
+    },
+    {
+        "Producto": "Kit de primeros auxilios para mascotas",
+        "Nombre": "Juan C.",
+        "Comentario": "Excelente kit, contiene todo lo necesario para emergencias.",
+        "Calificación": "★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\8.jpg"
+    },
+    {
+        "Producto": "Cepillo de dientes para perros, mango largo",
+        "Nombre": "Elena K.",
+        "Comentario": "Muy práctico y fácil de usar. Mi perro tiene dientes más limpios.",
+        "Calificación": "★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\9.jpg"
+    },
+    {
+        "Producto": "Suplemento de calcio para reptiles, 100 g",
+        "Nombre": "Pedro F.",
+        "Comentario": "Mi iguana está más activa y saludable desde que uso este suplemento.",
+        "Calificación": "★★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\11.jpg"
+    },
+    {
+        "Producto": "Comedero automático para mascotas, 3L",
+        "Nombre": "Carmen S.",
+        "Comentario": "Me ahorra mucho tiempo y mis mascotas siempre tienen comida.",
+        "Calificación": "★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\24.jpg"
+    },
+    {
+        "Producto": "Shampoo antipulgas para perros, 500 ml",
+        "Nombre": "Roberto H.",
+        "Comentario": "Funciona bien, pero el olor no es muy agradable.",
+        "Calificación": "★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\28.jpg"
+    },
+    {
+        "Producto": "Casa para hamster con tubos, plástico",
+        "Nombre": "Teresa D.",
+        "Comentario": "A mi hámster le encanta explorar los tubos. Gran compra.",
+        "Calificación": "★★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\27.jpg"
+    },
+    {
+        "Producto": "Manta térmica para mascotas, 60x45 cm",
+        "Nombre": "Gloria M.",
+        "Comentario": "Mantiene a mi gato caliente y cómodo. Muy buena calidad.",
+        "Calificación": "★★★★★",
+        "Imagen": "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\imagenes_paraJson\\15.jpg"
+    }
+]
