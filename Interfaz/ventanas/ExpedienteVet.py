@@ -6,7 +6,7 @@ import sys
 class HistorialDialog(QDialog):
     def __init__(self, id_expediente, parent=None):
         super().__init__(parent)
-        uic.loadUi("HistorialVet.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\HistorialVet.ui", self)
         self.id_expediente = id_expediente
         self.pushButton.clicked.connect(self.guardar_historial)
         self.pushButton_2.clicked.connect(self.close)  # Botón Cancelar

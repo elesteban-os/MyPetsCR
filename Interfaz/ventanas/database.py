@@ -73,19 +73,14 @@ class Database:
             )
         ''')
 
-        # Comprobar si las columnas existen antes de intentar agregarlas
-        self.agregar_columna_si_no_existe('expedientes', 'historial', 'TEXT')
-
         self.conn.commit()
-
-    def agregar_columna_si_no_existe(self, table_name, column_name, column_type):
-        self.cursor.execute(f"PRAGMA table_info({table_name})")
-        columns = [col[1] for col in self.cursor.fetchall()]
-        if column_name not in columns:
-            self.cursor.execute(f"ALTER TABLE {table_name} ADD COLUMN {column_name} {column_type}")
 
     def close(self):
         self.conn.close()
+
+if __name__ == "__main__":
+    db = Database()
+    db.close()
 
 class InsertarBaseDatos:
     def __init__(self, db_name="veterinaria.db"):
@@ -99,20 +94,15 @@ class InsertarBaseDatos:
                 INSERT INTO clientes (nombre, apellido, tipo_usuario, email, telefono, direccion, contrasena, mascota) VALUES 
                 (?, ?, ?, ?, ?, ?, ?, ?)
             ''', ('Juan', 'Perez', 'Cliente', 'juan.perez@example.com', '123456789', 'Calle 123', 'password123', 'Bobby'))
-            
-            self.cursor.execute('''
-                INSERT INTO clientes (nombre, apellido, tipo_usuario, email, telefono, direccion, contrasena, mascota) VALUES 
-                (?, ?, ?, ?, ?, ?, ?, ?)
-            ''', ('Fabiola', 'Castro', 'Cliente', 'fmelendez@gmail.com', '65788967', 'Calle 126', '456', 'Alex'))  
 
             # Obtener el ID del cliente insertado
             id_cliente = self.cursor.lastrowid
 
             # Insertar una mascota asociada al cliente
             self.cursor.execute('''
-                INSERT INTO mascotas (nombre, especie, raza, edad, id_cliente) VALUES 
-                (?, ?, ?, ?, ?)
-            ''', ('Bobby', 'Perro', 'Labrador', 5, id_cliente))
+                INSERT INTO mascotas (nombre, especie, raza, edad, id_cliente, alergias, padecimientos) VALUES 
+                (?, ?, ?, ?, ?, ?, ?)
+            ''', ('Bobby', 'Perro', 'Labrador', 5, id_cliente, 'None', 'None'))
 
             # Obtener el ID de la mascota insertada
             id_mascota = self.cursor.lastrowid
@@ -138,7 +128,6 @@ class InsertarBaseDatos:
                 (?, ?, ?, ?, ?)
             ''', ('2024-05-15 10:00', id_cliente, id_mascota, id_veterinario, 'Consulta general'))
 
-
             # Guardar cambios
             self.conn.commit()
             print("Datos iniciales insertados y conexión cerrada.")
@@ -148,17 +137,9 @@ class InsertarBaseDatos:
         finally:
             self.conn.close()
 
-# Uso de las clases para crear tablas e insertar datos
 if __name__ == "__main__":
-    # Crear la base de datos y sus tablas
-    db = Database()
-    db.close()
-
-    # Insertar datos iniciales
     insercion = InsertarBaseDatos()
     insercion.insertar_datos_iniciales()
-
-
 
 def insertar_expediente_de_prueba():
     conn = sqlite3.connect('veterinaria.db')
@@ -168,7 +149,7 @@ def insertar_expediente_de_prueba():
     cursor.execute('''
         INSERT INTO expedientes (id_mascota, nombre, especie, raza, edad, alergias, padecimientos, historial)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    ''', (19, 'Puchi', 'Canino', 'Felino', 1, 'Polvo', 'Tos seca', 'Historial de prueba'))
+    ''', (1, 'Puchi', 'Canino', 'Labrador', 1, 'Polvo', 'Tos seca', 'Historial de prueba'))
     
     conn.commit()
     conn.close()
@@ -176,4 +157,3 @@ def insertar_expediente_de_prueba():
 
 if __name__ == "__main__":
     insertar_expediente_de_prueba()
-

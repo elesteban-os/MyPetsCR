@@ -14,7 +14,7 @@ class HistorialComprasAdmi(QtWidgets.QMainWindow):
         self.cargar_historial()
 
     def cargar_historial(self):
-        json_file_path = r"C:\Users\Meibel\Downloads\MyPetsCR-main (1)\MyPetsCR-main\Interfaz\ComprasClientes.json"
+        json_file_path = r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\ComprasClientes.json"
         try:
             with open(json_file_path, 'r', encoding='utf-8') as file:
                 datos_compras = json.load(file)
