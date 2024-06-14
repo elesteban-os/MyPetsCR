@@ -24,13 +24,12 @@ class VeterinarioWindow(QMainWindow):
     def expedienteVeterinario(self):
         self.expediente_mascota = ExpedienteDialog()
         self.expediente_mascota.show()
-
+        
+    def registroservicios(self):
+        self.resgistro_servicios = RegistroServicios()
+        self.resgistro_servicios.show()
 
     def close_and_return(self):
         if self.parent() is not None:
             self.parent().show()
         self.close()
-
-    def registroservicios(self):
-        self.resgistro_servicios = RegistroServicios()
-        self.resgistro_servicios.show
