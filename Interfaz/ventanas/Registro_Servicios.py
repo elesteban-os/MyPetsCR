@@ -1,11 +1,12 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt6.uic import loadUi
+from PyQt6 import uic
 
 class RegistroServicios(QMainWindow):
     def __init__(self):
         super().__init__()
-        loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Registro_Servicios.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Registro_Servicios.ui", self)
 
         # Conectar botones a funciones
         self.btn_agregar.clicked.connect(self.mostrarMensaje)
@@ -16,9 +17,3 @@ class RegistroServicios(QMainWindow):
 
     def salirVentana(self):
         self.close()
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    main_window = RegistroServicios()
-    main_window.show()
-    sys.exit(app.exec())
