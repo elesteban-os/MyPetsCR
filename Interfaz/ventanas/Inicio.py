@@ -15,7 +15,16 @@ class Inicializar(QMainWindow):
         self.pushButton.clicked.connect(self.show_login)
         self.pushButton_3.clicked.connect(self.close_application)
         self.pushButton_2.clicked.connect(self.show_tienda)
-
+        self.pushButton_4.clicked.connect(self.show_contactos)
+        self.pushButton_5.clicked.connect(self.show_nuestrastiendas)
+    
+    def show_nuestrastiendas(self):
+        self.nuestrastiendas_window = SedeWindow() 
+        self.nuestrastiendas_window.show()
+    
+    def show_contactos(self):
+        self.contactos_window = ContactWindow() 
+        self.contactos_window.show()
         
     def show_login(self):
         self.login_window = Login(self.main_window)
