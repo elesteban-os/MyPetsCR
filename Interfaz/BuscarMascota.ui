@@ -13,11 +13,14 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>210</y>
+     <x>500</x>
+     <y>140</y>
      <width>191</width>
      <height>51</height>
     </rect>
@@ -26,7 +29,6 @@
     <font>
      <family>Bauhaus 93</family>
      <pointsize>14</pointsize>
-     <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
     </font>
@@ -53,8 +55,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>340</y>
+     <x>500</x>
+     <y>280</y>
      <width>191</width>
      <height>51</height>
     </rect>
@@ -63,7 +65,6 @@ color: rgb(255, 255, 255);</string>
     <font>
      <family>Bauhaus 93</family>
      <pointsize>14</pointsize>
-     <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
     </font>
@@ -81,8 +82,8 @@ border-color: rgb(170, 0, 255);</string>
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>280</y>
+     <x>500</x>
+     <y>210</y>
      <width>191</width>
      <height>51</height>
     </rect>
@@ -100,127 +101,40 @@ background-color: rgb(177, 97, 62);</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>80</y>
-     <width>901</width>
+     <x>500</x>
+     <y>50</y>
+     <width>691</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 25pt &quot;Tw Cen MT Condensed Extra Bold&quot;;
-color: rgb(26, 72, 91);
-</string>
+color: rgb(22, 61, 76);
+background-color: rgb(94, 140, 157);</string>
    </property>
    <property name="text">
     <string>Buscar mascota por Nombre, Dueño o Especie</string>
    </property>
   </widget>
-  <widget class="QFrame" name="frame">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>400</y>
-     <width>1161</width>
-     <height>421</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(26, 72, 91);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QTableWidget" name="tableWidgetResultados">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>1131</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-bottom-color: rgb(0, 0, 0);
-border-color: rgb(0, 0, 0);
-color: rgb(0, 0, 0);
-font: 12pt &quot;Segoe MDL2 Assets&quot;;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::WinPanel</enum>
-    </property>
-    <property name="lineWidth">
-     <number>8</number>
-    </property>
-    <property name="midLineWidth">
-     <number>4</number>
-    </property>
-    <property name="alternatingRowColors">
-     <bool>false</bool>
-    </property>
-    <property name="wordWrap">
-     <bool>true</bool>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>30</y>
-     <width>411</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-font: 38pt &quot;Showcard Gothic&quot;;</string>
-   </property>
-   <property name="text">
-    <string>MI   PET</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_4">
-   <property name="geometry">
-    <rect>
-     <x>1120</x>
-     <y>830</y>
-     <width>251</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: red;</string>
-   </property>
-   <property name="text">
-    <string>Salir</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="lineEditNombreMascota">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>210</y>
+     <x>720</x>
+     <y>150</y>
      <width>481</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEditNombreDueno">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>290</y>
+     <x>720</x>
+     <y>220</y>
      <width>481</width>
      <height>41</height>
     </rect>
@@ -232,8 +146,8 @@ color: red;</string>
   <widget class="QLineEdit" name="lineEditEspecie">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>350</y>
+     <x>720</x>
+     <y>290</y>
      <width>481</width>
      <height>41</height>
     </rect>
@@ -245,20 +159,353 @@ color: red;</string>
   <widget class="QPushButton" name="pushButtonBuscar">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>280</y>
-     <width>251</width>
-     <height>51</height>
+     <x>1240</x>
+     <y>190</y>
+     <width>151</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: red;</string>
+    <string notr="true">font: 14pt &quot;Bauhaus 93&quot;;
+color: WHITE;
+background-color: rgb(39, 39, 39);</string>
    </property>
    <property name="text">
     <string>Buscar</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>70</y>
+     <width>251</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 49pt &quot;Showcard Gothic&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MI PET</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>160</y>
+     <width>261</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>5</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(224, 123, 79);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>170</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20pt &quot;Forte&quot;;
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Busqueda de Clientes</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>330</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 25pt &quot;Tw Cen MT Condensed Extra Bold&quot;;
+color: rgb(224, 123, 79);
+</string>
+   </property>
+   <property name="text">
+    <string>RESULTADOS:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>40</y>
+     <width>91</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 140, 157);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Imagenes/search_icon_125165.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>40</y>
+     <width>751</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 140, 157);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>380</y>
+     <width>1201</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(94, 140, 157);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>1161</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(26, 72, 91);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTableWidget" name="tableWidgetResultados">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>1141</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-bottom-color: rgb(0, 0, 0);
+border-color: rgb(0, 0, 0);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe MDL2 Assets&quot;;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="lineWidth">
+      <number>8</number>
+     </property>
+     <property name="midLineWidth">
+      <number>4</number>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>1250</x>
+     <y>830</y>
+     <width>141</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;Bauhaus 93&quot;;
+color: WHITE;
+background-color: rgb(39, 39, 39);</string>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>301</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>5</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_8">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>5</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>5</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_9">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>60</y>
+     <width>5</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>5</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>301</width>
+     <height>5</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>5</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>350</y>
+     <width>1411</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 700 18pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>. . . . . . . . . .  . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </string>
+   </property>
+  </widget>
+  <zorder>frame_2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>lineEditNombreMascota</zorder>
+  <zorder>lineEditNombreDueno</zorder>
+  <zorder>lineEditEspecie</zorder>
+  <zorder>pushButtonBuscar</zorder>
+  <zorder>label_2</zorder>
+  <zorder>line</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label</zorder>
+  <zorder>frame_3</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>line_2</zorder>
+  <zorder>line_8</zorder>
+  <zorder>line_9</zorder>
+  <zorder>line_3</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_5</zorder>
  </widget>
  <resources/>
  <connections/>

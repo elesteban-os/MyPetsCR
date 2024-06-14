@@ -6,7 +6,7 @@ import sys
 class BuscarMascota(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        uic.loadUi("BuscarMascota.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\BuscarMascota.ui", self)
         self.pushButtonBuscar.clicked.connect(self.buscar_mascotas)
 
     def buscar_mascotas(self):
