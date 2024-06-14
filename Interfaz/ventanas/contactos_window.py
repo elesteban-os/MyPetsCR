@@ -43,7 +43,7 @@ class ContactWindow(QMainWindow):
         
         # Contacto de WhatsApp
         self.whatsapp_label = QLabel(
-            "<img src='C:\\Users\\Meibel\\Downloads\\MyPetsCR-main (2)\\MyPetsCR-main\\Interfaz\\Imagenes\\whatsapp.png' width='50' height='50'> "
+            "<img src='C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\whatsapp.png' width='50' height='50'> "
             "<span>WhatsApp: <a href='https://wa.me/11234567890'>Enviar mensaje</a></span>"
         )
         self.whatsapp_label.setOpenExternalLinks(True)
@@ -52,7 +52,7 @@ class ContactWindow(QMainWindow):
         
         # Contacto correos electrónicos
         self.gmail_label = QLabel(
-            "<img src='C:\\Users\\Meibel\\Downloads\\MyPetsCR-main (2)\\MyPetsCR-main\\Interfaz\\Imagenes\\gmail.png' width='30' height='30'> "
+            "<img src='C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\gmail.png' width='30' height='30'> "
             "<span>Correo Gmail: <a href='#' id='gmail'>veterinariaMiPet@gmail.com</a></span>"
         )
         self.gmail_label.linkActivated.connect(self.open_gmail)
@@ -60,7 +60,7 @@ class ContactWindow(QMainWindow):
         layout.addWidget(self.gmail_label, alignment=Qt.AlignmentFlag.AlignCenter)
         
         self.outlook_label = QLabel(
-            "<img src='C:\\Users\\Meibel\\Downloads\\MyPetsCR-main (2)\\MyPetsCR-main\\Interfaz\\Imagenes\\outlook1.png' width='30' height='30'> "
+            "<img src='C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\outlook1.png' width='30' height='30'> "
             "<span>Correo Outlook: <a href='#' id='outlook'>veterinariasMiPet@outlook.com</a></span>"
         )
         self.outlook_label.linkActivated.connect(self.open_outlook)
@@ -74,7 +74,7 @@ class ContactWindow(QMainWindow):
         
         # Redes sociales
         self.facebook_label = QLabel(
-            "<img src='C:\\Users\\Meibel\\Downloads\\MyPetsCR-main (2)\\MyPetsCR-main\\Interfaz\\Imagenes\\facebook.png' width='80' height='50'> "
+            "<img src='C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\facebook.png' width='80' height='50'> "
             "<span>Facebook: <a href='https://www.facebook.com/tu_pagina'>Mi_Pet_Veterinaria</a></span>"
         )
         self.facebook_label.setOpenExternalLinks(True)
@@ -82,7 +82,7 @@ class ContactWindow(QMainWindow):
         layout.addWidget(self.facebook_label, alignment=Qt.AlignmentFlag.AlignCenter)
         
         self.instagram_label = QLabel(
-            "<img src='C:\\Users\\Meibel\\Downloads\\MyPetsCR-main (2)\\MyPetsCR-main\\Interfaz\\Imagenes\\instagram.png' width='50' height='50'> "
+            "<img src='C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\instagram.png' width='50' height='50'> "
             "<span>Instagram: <a href='https://www.instagram.com/tu_pagina'>MiPet_veterinarias</a></span>"
         )
         self.instagram_label.setOpenExternalLinks(True)
@@ -96,7 +96,7 @@ class ContactWindow(QMainWindow):
         # Añadir fondo de pantalla
         self.setCentralWidget(central_widget)
         palette = QPalette()
-        palette.setBrush(QPalette.ColorRole.Window, QBrush(QPixmap("C:/Users/Meibel/Downloads/MyPetsCR-main (2)/MyPetsCR-main/Interfaz/Imagenes/fondo.jpg").scaled(self.size(), Qt.AspectRatioMode.IgnoreAspectRatio, Qt.TransformationMode.SmoothTransformation)))
+        palette.setBrush(QPalette.ColorRole.Window, QBrush(QPixmap("C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\fondo.jpg").scaled(self.size(), Qt.AspectRatioMode.IgnoreAspectRatio, Qt.TransformationMode.SmoothTransformation)))
         self.setPalette(palette)
     
     def open_gmail(self):
