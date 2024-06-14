@@ -53,9 +53,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
         for sede in self.sedes:
             # Ejemplo de horarios disponibles (puedes personalizar según sea necesario)
-            sede.agregar_horario_disponible(datetime(2024, 6, 15, 10, 0))
-            sede.agregar_horario_disponible(datetime(2024, 6, 15, 11, 0))
-            sede.agregar_horario_disponible(datetime(2024, 6, 15, 12, 0))
+            sede.agregar_horario_disponible(datetime(2024, 6, 12, 10, 0))
+            sede.agregar_horario_disponible(datetime(2024, 6, 12, 11, 0))
+            sede.agregar_horario_disponible(datetime(2024, 6, 12, 12, 0))
 
         for sede in self.sedes:
             self.sede.addItem(sede.nombre)
