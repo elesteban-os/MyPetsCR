@@ -1,10 +1,10 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from PyQt6 import uic
 import sys
+from Interfaz.ventanas.contactos_window import ContactWindow
+from Interfaz.ventanas.nuestrastiendas import SedeWindow
 from ventanas.Login import Login
 from ventanas.Tienda import Tienda
-from ventanas.contactos_window import ContactWindow
-from ventanas.nuestrastiendas import SedeWindow
 
 class Inicializar(QMainWindow):
     def __init__(self, main_window):
