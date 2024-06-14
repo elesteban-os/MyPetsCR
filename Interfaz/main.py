@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.inicio_window = Inicializar(self)
         self.login_window = Login(self)
-        self.cliente_window = ClienteWindow()
+        self.cliente_window = ClienteWindow(self)
         self.administrador_window = AdministradorWindow()
         self.veterinario_window = VeterinarioWindow()
         self.tienda_window = Tienda(self)
