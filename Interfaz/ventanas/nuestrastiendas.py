@@ -7,11 +7,11 @@ from PIL import Image
 # Lista de rutas de imágenes
 imagenes = [
     "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\central.jpg",
-    "C:C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\norte.jpg",
-    "C:C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\sur.jpg",
-    "C:C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\este.jpg",
-    "C:C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\oeste.jpg",
-    r"C:C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\fondo_nuestrastiendas.jpeg"
+    "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\norte.jpg",
+    "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\sur.jpg",
+    "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\este.jpg",
+    "C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\oeste.jpg",
+    r"C:\\Datos1_Proyecto1\\MyPetsCR\\Interfaz\\Imagenes\\fondo_nuestrastiendas.jpeg"
 ]
 
 # Convertir imágenes a un formato estándar sin perfiles ICC

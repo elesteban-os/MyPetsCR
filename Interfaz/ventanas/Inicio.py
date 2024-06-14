@@ -3,6 +3,8 @@ from PyQt6 import uic
 import sys
 from ventanas.Login import Login
 from ventanas.Tienda import Tienda
+from ventanas.contactos_window import ContactWindow
+from ventanas.nuestrastiendas import SedeWindow
 
 class Inicializar(QMainWindow):
     def __init__(self, main_window):

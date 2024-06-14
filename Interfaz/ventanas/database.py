@@ -74,8 +74,7 @@ class Database:
         ''')
 
         # Comprobar si las columnas existen antes de intentar agregarlas
-        self.agregar_columna_si_no_existe('mascotas', 'alergias', 'TEXT')
-        self.agregar_columna_si_no_existe('mascotas', 'padecimientos', 'TEXT')
+        self.agregar_columna_si_no_existe('expedientes', 'historial', 'TEXT')
 
         self.conn.commit()
 
@@ -87,7 +86,6 @@ class Database:
 
     def close(self):
         self.conn.close()
-
 
 class InsertarBaseDatos:
     def __init__(self, db_name="veterinaria.db"):
@@ -140,6 +138,7 @@ class InsertarBaseDatos:
                 (?, ?, ?, ?, ?)
             ''', ('2024-05-15 10:00', id_cliente, id_mascota, id_veterinario, 'Consulta general'))
 
+
             # Guardar cambios
             self.conn.commit()
             print("Datos iniciales insertados y conexión cerrada.")
@@ -160,4 +159,21 @@ if __name__ == "__main__":
     insercion.insertar_datos_iniciales()
 
 
+
+def insertar_expediente_de_prueba():
+    conn = sqlite3.connect('veterinaria.db')
+    cursor = conn.cursor()
+    
+    # Insertar un expediente ejemplo
+    cursor.execute('''
+        INSERT INTO expedientes (id_mascota, nombre, especie, raza, edad, alergias, padecimientos, historial)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (19, 'Puchi', 'Canino', 'Felino', 1, 'Polvo', 'Tos seca', 'Historial de prueba'))
+    
+    conn.commit()
+    conn.close()
+    print("Expediente de prueba insertado.")
+
+if __name__ == "__main__":
+    insertar_expediente_de_prueba()
 

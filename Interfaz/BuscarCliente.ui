@@ -142,6 +142,9 @@ border-radius: 20;</string>
      <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
@@ -201,18 +204,18 @@ color: rgb(224, 123, 79);
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>60</x>
      <y>140</y>
-     <width>331</width>
-     <height>51</height>
+     <width>261</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-font: 20pt &quot;Showcard Gothic&quot;;</string>
+    <string notr="true">font: 20pt &quot;Forte&quot;;
+color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>busqueda por cliente</string>
