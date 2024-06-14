@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QMainWindow
 from PyQt6 import uic
 from .ExpedienteVet import ExpedienteDialog
 from .BuscarMascota import BuscarMascota
+from .Registro_Servicios import RegistroServicios
 
 class VeterinarioWindow(QMainWindow):
     def __init__(self):
@@ -13,6 +14,8 @@ class VeterinarioWindow(QMainWindow):
         self.pushButton_5.clicked.connect(self.close_and_return)
 
         self.push_Button_BuscarMascota.clicked.connect(self.buscarMascota)
+        
+        self.pushButton_7.clicked.connect(self.registroservicios)
 
     def buscarMascota(self):
         self.buscar_mascota = BuscarMascota(self)
@@ -27,3 +30,7 @@ class VeterinarioWindow(QMainWindow):
         if self.parent() is not None:
             self.parent().show()
         self.close()
+
+    def registroservicios(self):
+        self.resgistro_servicios = RegistroServicios()
+        self.resgistro_servicios.show

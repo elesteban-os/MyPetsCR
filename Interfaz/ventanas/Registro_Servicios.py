@@ -2,7 +2,7 @@ import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt6.uic import loadUi
 
-class MainWindow(QMainWindow):
+class RegistroServicios(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Registro_Servicios.ui", self)
@@ -19,6 +19,6 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    main_window = MainWindow()
+    main_window = RegistroServicios()
     main_window.show()
     sys.exit(app.exec())
