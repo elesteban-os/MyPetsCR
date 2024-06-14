@@ -15,7 +15,7 @@ class VeterinarioWindow(QMainWindow):
 
         self.push_Button_BuscarMascota.clicked.connect(self.buscarMascota)
         
-        self.pushButton_7.clicked.connect(self.registroservicios)
+        self.pushButton_2.clicked.connect(self.registroservicios)
 
     def buscarMascota(self):
         self.buscar_mascota = BuscarMascota(self)

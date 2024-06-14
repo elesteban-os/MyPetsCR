@@ -1,6 +1,7 @@
+import json
+import sqlite3
 from PyQt6.QtWidgets import QApplication, QDialog, QMessageBox, QTableWidgetItem
 from PyQt6 import uic
-import sqlite3
 import sys
 
 class HistorialDialog(QDialog):
@@ -46,7 +47,41 @@ class HistorialDialog(QDialog):
         ''', (historial, self.id_expediente))
         conn.commit()
         conn.close()
+        
+        # Actualizar archivo JSON
+        self.actualizar_json(historial)
         self.accept()
+
+    def actualizar_json(self, historial):
+        try:
+            with open("Tratamientos_Vete.json", "r") as file:
+                data = json.load(file)
+
+            # Convertir el historial a una lista de servicios
+            servicios = historial.split('\n')
+            
+            # Limpiar cualquier entrada vacía
+            servicios = [servicio.strip() for servicio in servicios if servicio.strip()]
+
+            # Agregar los servicios al archivo JSON
+            if "servicios" not in data:
+                data["servicios"] = []
+
+            data["servicios"].extend(servicios)
+            
+            print("Servicios a guardar en JSON:", data["servicios"])  # Mensaje de depuración
+
+            with open("Tratamientos_Vete.json", "w") as file:
+                json.dump(data, file, indent=2)
+            
+            print("Archivo JSON actualizado correctamente.")  # Mensaje de depuración
+
+        except FileNotFoundError:
+            QMessageBox.warning(self, "Error", "El archivo JSON no se encontró.")
+        except json.JSONDecodeError:
+            QMessageBox.warning(self, "Error", "Error al leer el archivo JSON.")
+        except Exception as e:
+            QMessageBox.warning(self, "Error", f"Error inesperado: {e}")
 
 class ExpedienteDialog(QDialog):
     def __init__(self):
@@ -164,6 +199,3 @@ if __name__ == "__main__":
     sys.exit(app.exec())
 
 
-
-
-    

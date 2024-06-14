@@ -127,9 +127,10 @@ class ProductosListView(QWidget):
 
 class ProcesarPagos(QWidget):
     payment_processed = pyqtSignal()
+
     def __init__(self, productos):
         super().__init__()
-        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Pagos_Fisicos.ui", self)
+        uic.loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Pagos_Fisicos.ui", self)
         self.productos = productos
         self.update_total()
         self.pushButton.clicked.connect(self.procesar_pago)
@@ -142,17 +143,11 @@ class ProcesarPagos(QWidget):
         nombre_completo = self.lineEdit_2.text()
 
         if self.checkBox.isChecked():
-            self.image_window = ImageWindow("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Imagenes\datafono.jpg")
+            self.image_window = ImageWindow(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Imagenes\datafono.jpg")
             self.image_window.show()
 
-        if self.checkBox_2.isChecked():
-            self.show_message("El pago ha sido registrado, recuerda recordar al cliente por su comprobante", "Pago Procesado")
-
-        if self.checkBox_3.isChecked():
-            self.show_message("El pago ha sido registrado, recuerda recordar al cliente por su comprobante", "Pago Procesado")
-
-        if self.checkBox_4.isChecked():
-            self.show_message("El pago ha sido registrado, recuerda recordar al cliente por su comprobante", "Pago Procesado")
+        if self.checkBox_2.isChecked() or self.checkBox_3.isChecked() or self.checkBox_4.isChecked():
+            print("procesado")
 
         now = datetime.now()
         fecha_hora = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -167,13 +162,12 @@ class ProcesarPagos(QWidget):
             "articulos_comprados": articulos_comprados
         }
 
-        json_path = "C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Servicios_Fisicos.json"
+        json_path = r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Servicios_Fisicos.json"
         try:
-            if os.path.exists(json_path):
+            existing_data = []
+            if os.path.exists(json_path) and os.path.getsize(json_path) > 0:
                 with open(json_path, "r", encoding='utf-8') as json_file:
                     existing_data = json.load(json_file)
-            else:
-                existing_data = []
 
             existing_data.append(data)
 
@@ -181,11 +175,14 @@ class ProcesarPagos(QWidget):
                 json.dump(existing_data, json_file, indent=4, ensure_ascii=False)
 
             self.show_message("Su pago fue procesado", "Pago Procesado")
-            self.payment_processed.emit()  # Emitir la señal aquí
+            self.payment_processed.emit()
             self.close()
             
         except Exception as e:
-            logging.error(f"Error while writing purchase data: {e}") 
+            logging.error(f"Error while writing purchase data: {e}")
+
+    def show_message(self, message, title):
+        QMessageBox.information(self, title, message)   
 
 class Facturacion(QtWidgets.QWidget):
     def __init__(self):

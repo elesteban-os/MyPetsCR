@@ -137,7 +137,8 @@ background-color: rgb(255, 191, 146);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
-font: 13pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 13pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_12">
@@ -168,7 +169,8 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);
-font: 13pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 13pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">

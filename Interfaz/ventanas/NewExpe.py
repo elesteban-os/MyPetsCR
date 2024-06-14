@@ -8,8 +8,6 @@ class ExpedienteDialog(QDialog):
         super().__init__()
         uic.loadUi(r"C:\Datos1_Proyecto1\MyPetsCR\Interfaz\NewExpediente.ui", self)
 
-        self.pushButton.clicked.connect(self.guardar_cambios)
-        self.pushButtonMostrarDatos.clicked.connect(self.cargar_datos)
         self.pushButton_2.clicked.connect(self.close)  # Botón Cancelar
         self.pushButton_3.clicked.connect(self.buscar_mascota)
 

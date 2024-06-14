@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "hola",
+        "hora": "2024-06-14 00:35:56",
+        "numero_transaccion": 1101688,
+        "total": "$734.50",
+        "articulos_comprados": [
+            {
+                "nombre": "Ortopedía",
+                "precio_final": 146.9
+            },
+            {
+                "nombre": "Radiología",
+                "precio_final": 183.06
+            },
+            {
+                "nombre": "Ortopedía",
+                "precio_final": 146.9
+            },
+            {
+                "nombre": "Radiología",
+                "precio_final": 183.06
+            },
+            {
+                "nombre": "Limpieza Dental",
+                "precio_final": 74.58
+            }
+        ]
+    },
+    {
+        "nombre": "holap",
+        "hora": "2024-06-14 00:38:49",
+        "numero_transaccion": 4857964,
+        "total": "$572.91",
+        "articulos_comprados": [
+            {
+                "nombre": "Radiología",
+                "precio_final": 183.06
+            },
+            {
+                "nombre": "Limpieza Dental",
+                "precio_final": 74.58
+            },
+            {
+                "nombre": "Radiología",
+                "precio_final": 183.06
+            },
+            {
+                "nombre": "Limpieza Dental",
+                "precio_final": 74.58
+            },
+            {
+                "nombre": "Hospedaje",
+                "precio_final": 57.63
+            }
+        ]
+    }
+]

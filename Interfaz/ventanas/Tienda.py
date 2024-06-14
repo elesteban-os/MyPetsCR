@@ -7,6 +7,7 @@ from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QMessage
 from .HistorialCompras import HistorialCompras
 from datetime import datetime
 from .Login import Login
+from .contactos_window import ContactWindow
 import os
 import json
 
@@ -116,14 +117,15 @@ class ProductosListView(QWidget):
 #entonces lo que pensaba hacer era que nada más se mostrara una ventana con información del numero de cuenta al que depositar y el numero de sinpe y que pasaran el comprobante de pago a ese numero
 #solo es como una ventana de info, se puede usar esta y yo agrego la info ya casi
 class MetodosPagoWidget(QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+    def __init__(self):
+        super().__init__()
         uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\MetodosPago.ui", self)
 
 #esta clase es para procesar los pagos que se realizan
 #es la ventana donde se añaden los datos de la compra al json y así
 class ProcesarPagos(QWidget):
     payment_processed = pyqtSignal()
+    
     def __init__(self, productos):
         super().__init__()
         uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\ProcesarPagos.ui", self)
@@ -132,32 +134,34 @@ class ProcesarPagos(QWidget):
         self.pushButton.clicked.connect(self.tarjeta_selection)
         self.checkBox.stateChanged.connect(self.on_checkbox_state_changed)
         self.pushButton_2.clicked.connect(self.otros_metodos)
+        self.metodos_pago_widget = None  # Initialize as None
     
-    #el subtotal que se toma del carrito
     def update_subtotal(self):
         subtotal_amount = sum(producto.precio_final() for producto in self.productos)
-        self.label_19.setText(f"₡{subtotal_amount:.2f}")
+        self.label_19.setText(f"${subtotal_amount:.2f}")
 
-    #esto es pq se cobra un total con envio
+# esto es pq se cobra un total con envio
     def update_total(self):
-        subtotal_text = self.label_19.text().replace("₡", "")
-        subtotal_amount = float(subtotal_text)
-        total_amount = subtotal_amount + 4500  # Sumar el monto de envío
-        self.label_23.setText(f"Total: ₡{total_amount:.2f}")
-
+        subtotal_text = self.label_19.text().replace("₡", "").replace("$", "").strip()
+        try:
+            subtotal_amount = float(subtotal_text)
+        except ValueError:
+            subtotal_amount = 0.0  # or handle the error appropriately
+        total_amount = subtotal_amount + 8.49  # Sumar el monto de envío
+        self.label_23.setText(f"Total: ${total_amount:.2f}")
     #esta es la que llama a la cosa de otros metodos de pago
     def otros_metodos(self):
-        metodos_pago_widget = MetodosPagoWidget(self)
-        metodos_pago_widget.show()
+        self.metodos_pago_widget = MetodosPagoWidget()  # Keep a reference to the widget
+        self.metodos_pago_widget.show()
 
     #esto es para que se cambie el precio si se toca el check o no
     def on_checkbox_state_changed(self):
         if self.checkBox.isChecked():
             self.label_23.setText(self.label_19.text())
-            self.label_21.setText("₡0")
+            self.label_21.setText("$0")
 
         else:      
-            self.label_21.setText("₡4500")
+            self.label_21.setText("$8.49")
             self.update_total()
 
     #solo deja poner numeros en el numero de tarjeta
@@ -282,11 +286,17 @@ class Tienda(QtWidgets.QWidget):
         self.pushButton_5.clicked.connect(self.show_selected_productos_list)
         self.pushButton_4.clicked.connect(self.show_login)
         self.pushButton.clicked.connect(self.show_main_window)
+        self.pushButton_2.clicked.connect(self.show_contacto)
+        self.pushButton_3.clicked.connect(self.show_login)
 
     def show_login(self):
         self.login_window = Login(self.main_window)
         self.login_window.show()
         self.close()
+    
+    def show_contacto(self):
+        self.contactos_window = ContactWindow() 
+        self.contactos_window.show() 
 
     def show_main_window(self):
         # Mostrar la ventana principal

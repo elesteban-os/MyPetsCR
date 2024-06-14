@@ -240,5 +240,30 @@
                 "precio_final": 97.1122
             }
         ]
+    },
+    {
+        "nombre": "jkhkhdksa",
+        "correo": "ghjjhgzljc",
+        "hora": "2024-06-14 03:55:47",
+        "numero_transaccion": 7138079,
+        "total": "$364.65",
+        "articulos_comprados": [
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Bandeja sanitaria para gatos, 50x40 cm",
+                "precio_final": 85.2133
+            },
+            {
+                "nombre": "Pelota resistente para perros, 10 cm de diámetro",
+                "precio_final": 97.1122
+            }
+        ]
     }
 ]

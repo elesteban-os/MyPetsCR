@@ -49,6 +49,7 @@ class SedeWindow(QMainWindow):
         titulo = QLabel('Nuestras tiendas están ubicadas en los siguientes lugares del país:')
         titulo.setFont(QFont('Arial', 16, QFont.Weight.Bold))
         titulo.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        titulo.setStyleSheet("color: black;")  # Set text color to black
         layout.addWidget(titulo)
 
         # Crear un grid layout para las imágenes y las sedes
@@ -77,6 +78,7 @@ class SedeWindow(QMainWindow):
             label_sede = QLabel(sede)
             label_sede.setFont(QFont('Arial', 14, QFont.Weight.Bold))
             label_sede.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            label_sede.setStyleSheet("color: black;")  # Set text color to black
             frame_layout.addWidget(label_sede)
 
             # Imagen de la sede
@@ -90,6 +92,7 @@ class SedeWindow(QMainWindow):
             label_direccion = QLabel(direccion)
             label_direccion.setFont(QFont('Arial', 12))
             label_direccion.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            label_direccion.setStyleSheet("color: black;")  # Set text color to black
             frame_layout.addWidget(label_direccion)
 
             frame.setLayout(frame_layout)
