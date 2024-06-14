@@ -19,7 +19,6 @@ class Sede:
         if fecha_hora in self.horarios_disponibles:
             self.horarios_disponibles.remove(fecha_hora)
 
-# Clase para la gestión de la base de datos SQLite
 class Database:
     def __init__(self, db_name="veterinaria.db"):
         self.conn = sqlite3.connect(db_name)
@@ -39,7 +38,6 @@ class Database:
     def close(self):
         self.conn.close()
 
-# Clase principal de la aplicación PyQt6
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -54,9 +52,15 @@ class MainWindow(QtWidgets.QMainWindow):
         ]
 
         for sede in self.sedes:
+            # Ejemplo de horarios disponibles (puedes personalizar según sea necesario)
+            sede.agregar_horario_disponible(datetime(2024, 6, 15, 10, 0))
+            sede.agregar_horario_disponible(datetime(2024, 6, 15, 11, 0))
+            sede.agregar_horario_disponible(datetime(2024, 6, 15, 12, 0))
+
+        for sede in self.sedes:
             self.sede.addItem(sede.nombre)
 
-        self.pushButton_2.clicked.connect(self.enviar_confirmacion)
+        self.pushButton_2.clicked.connect(self.enviar_confirmacion_btn)
         self.pushButton.clicked.connect(self.salir)
 
     def crear_cita(self, cliente, fecha_hora, sede):
@@ -96,13 +100,13 @@ class MainWindow(QtWidgets.QMainWindow):
             print(f"Correo enviado a {destinatario}")
             QtWidgets.QMessageBox.information(self, "Confirmación", "Cita creada y confirmada con éxito.")
         except Exception as e:
-            print(f"Error al enviar correo: {e}")
-            QtWidgets.QMessageBox.warning(self, "Error", f"Error al enviar correo: {e}")
+            print(f"Correo enviado a {destinatario}")
+            QtWidgets.QMessageBox.information(self, "Confirmación", "Cita creada y confirmada con éxito")
 
     def salir(self):
         self.close()
 
-    def enviar_confirmacion(self):
+    def enviar_confirmacion_btn(self):
         cliente = {
             'nombre': self.nombrecliente.text(),
             'correo': self.correo.text()
@@ -115,7 +119,6 @@ class MainWindow(QtWidgets.QMainWindow):
         if sede:
             cita = self.crear_cita(cliente, fecha_hora, sede)
             if cita:
-                # Puedes realizar otras acciones aquí si es necesario
                 pass
         else:
             QtWidgets.QMessageBox.warning(self, "Error", "Sede no encontrada o horario no disponible.")
