@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1340</width>
-    <height>872</height>
+    <width>1208</width>
+    <height>832</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,57 +24,21 @@
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>0</y>
-      <width>501</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 36pt &quot;MS Shell Dlg 2&quot;;
-color:red;</string>
-    </property>
-    <property name="text">
-     <string>Veterinaria MiPet</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>-10</y>
-      <width>131</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>Imagenes/Imagen2.jpg</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_9">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>700</y>
-      <width>251</width>
-      <height>51</height>
+      <x>990</x>
+      <y>710</y>
+      <width>191</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: red;</string>
+background-color: rgb(255, 255, 255);
+border-radius:20px;
+color: rgb(77, 115, 129);
+border-color: rgb(77, 115, 129);</string>
     </property>
     <property name="text">
      <string>Salir</string>
@@ -83,20 +47,20 @@ color: red;</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>120</y>
-      <width>71</width>
-      <height>61</height>
+      <x>20</x>
+      <y>200</y>
+      <width>91</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">background-color: rgb(26, 72, 91);</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Imagenes/Imagen4.png</pixmap>
+     <pixmap>Imagenes/4645949.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -105,26 +69,29 @@ color: red;</string>
    <widget class="QPushButton" name="pushButton_8">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>270</y>
+      <x>140</x>
+      <y>700</y>
       <width>221</width>
       <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Crear Citas </string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>-50</x>
-      <y>280</y>
-      <width>251</width>
-      <height>161</height>
+      <x>20</x>
+      <y>320</y>
+      <width>101</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -134,17 +101,39 @@ color: red;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Imagenes/Imagen 6.png</pixmap>
+     <pixmap>Imagenes/3891568.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>410</y>
+      <y>560</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/2246679.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>320</y>
       <width>91</width>
       <height>81</height>
      </rect>
@@ -156,86 +145,7 @@ color: red;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Imagenes/Imagen5.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>520</y>
-      <width>81</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>Imagenes/Imagen1.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>220</y>
-      <width>131</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>Imagenes/Imagen8.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>740</x>
-      <y>30</y>
-      <width>551</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; color:#ffaa7f;&quot;&gt;Bienvenido Administrador!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>220</y>
-      <width>71</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>Imagenes/Imagen3.png</pixmap>
+     <pixmap>Imagenes/shopping_cart_PNG38.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -244,92 +154,36 @@ color: red;</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>160</y>
-      <width>459</width>
-      <height>42</height>
+      <x>130</x>
+      <y>340</y>
+      <width>261</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Registrar Mascota</string>
     </property>
    </widget>
-   <widget class="QMdiArea" name="mdiArea_12">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>520</y>
-      <width>371</width>
-      <height>61</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>240</y>
-      <width>459</width>
-      <height>42</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Historial Clínico</string>
-    </property>
-   </widget>
-   <widget class="QMdiArea" name="mdiArea_3">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>400</y>
-      <width>401</width>
-      <height>111</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QMdiArea" name="mdiArea_4">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>230</y>
-      <width>391</width>
-      <height>61</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>320</y>
-      <width>451</width>
-      <height>42</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Perfil Propietario y Mascota </string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_7">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>530</y>
-      <width>459</width>
-      <height>42</height>
+      <x>780</x>
+      <y>470</y>
+      <width>301</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Historial Facturaciones Clientes </string>
@@ -340,58 +194,34 @@ color: red;</string>
      <rect>
       <x>130</x>
       <y>460</y>
-      <width>459</width>
-      <height>42</height>
+      <width>261</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Facturación</string>
     </property>
    </widget>
-   <widget class="QMdiArea" name="mdiArea_10">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>110</y>
-      <width>371</width>
-      <height>101</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QMdiArea" name="mdiArea_5">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>320</y>
-      <width>371</width>
-      <height>51</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QMdiArea" name="mdiArea_11">
-    <property name="geometry">
-     <rect>
-      <x>910</x>
-      <y>260</y>
-      <width>211</width>
-      <height>71</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_1">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>120</y>
-      <width>459</width>
-      <height>42</height>
+      <x>130</x>
+      <y>220</y>
+      <width>261</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Registrar Dueño</string>
@@ -400,14 +230,17 @@ color: red;</string>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>410</y>
-      <width>461</width>
-      <height>41</height>
+      <x>780</x>
+      <y>340</y>
+      <width>261</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Venta de Productos</string>
@@ -416,60 +249,46 @@ color: red;</string>
    <widget class="QPushButton" name="pushButtonBuscarMascota">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>120</y>
-      <width>459</width>
-      <height>42</height>
+      <x>790</x>
+      <y>220</y>
+      <width>261</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Busqueda Mascota</string>
-    </property>
-   </widget>
-   <widget class="QMdiArea" name="mdiArea_6">
-    <property name="geometry">
-     <rect>
-      <x>730</x>
-      <y>110</y>
-      <width>501</width>
-      <height>61</height>
-     </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_10">
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>620</y>
-      <width>459</width>
-      <height>42</height>
+      <y>580</y>
+      <width>261</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
-     <string>Expediente</string>
-    </property>
-   </widget>
-   <widget class="QMdiArea" name="mdiArea_7">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>610</y>
-      <width>391</width>
-      <height>61</height>
-     </rect>
+     <string>Expedientes</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>610</y>
+      <x>670</x>
+      <y>210</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -481,7 +300,7 @@ color: red;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Imagenes/Imagen3.png</pixmap>
+     <pixmap>Imagenes/search.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -490,67 +309,256 @@ color: red;</string>
    <widget class="QPushButton" name="pushButton_11">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>530</y>
-      <width>459</width>
-      <height>42</height>
+      <x>780</x>
+      <y>600</y>
+      <width>311</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: white ;</string>
     </property>
     <property name="text">
      <string>Crear Facturaciones Veterinaria</string>
     </property>
    </widget>
-   <widget class="QMdiArea" name="mdiArea_13">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>730</x>
-      <y>520</y>
-      <width>371</width>
-      <height>61</height>
+      <x>110</x>
+      <y>10</y>
+      <width>131</width>
+      <height>111</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(26, 72, 91);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/Logo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
-   <zorder>mdiArea_13</zorder>
-   <zorder>mdiArea_6</zorder>
-   <zorder>mdiArea_11</zorder>
-   <zorder>mdiArea_5</zorder>
-   <zorder>mdiArea_4</zorder>
-   <zorder>mdiArea_10</zorder>
-   <zorder>mdiArea_12</zorder>
-   <zorder>label</zorder>
-   <zorder>label_6</zorder>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>371</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 49pt &quot;Showcard Gothic&quot;;</string>
+    </property>
+    <property name="text">
+     <string>MI           PET</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>160</y>
+      <width>1241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>120</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;Forte&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Administrador</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>50</y>
+      <width>481</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 35pt &quot;Tw Cen MT Condensed Extra Bold&quot;;
+color: rgb(255, 255, 255);
+
+</string>
+    </property>
+    <property name="text">
+     <string>Bienvenido Administrador!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>440</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(26, 72, 91);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/522575.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>450</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/5231365.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>580</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/1250611.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>680</y>
+      <width>101</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Imagenes/990060.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>700</y>
+      <width>211</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(77, 115, 129);
+border-radius:20px;
+color: rgb(77, 115, 129);
+border-color: rgb(77, 115, 129);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>pushButton_12</zorder>
    <zorder>pushButton_9</zorder>
    <zorder>label_4</zorder>
    <zorder>pushButton_8</zorder>
    <zorder>label_7</zorder>
    <zorder>label_8</zorder>
    <zorder>label_10</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label_5</zorder>
-   <zorder>label_3</zorder>
    <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>mdiArea_3</zorder>
-   <zorder>pushButton_4</zorder>
    <zorder>pushButton_7</zorder>
    <zorder>pushButton_6</zorder>
    <zorder>pushButton_1</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButtonBuscarMascota</zorder>
-   <zorder>mdiArea_7</zorder>
    <zorder>pushButton_10</zorder>
    <zorder>label_9</zorder>
    <zorder>pushButton_11</zorder>
+   <zorder>label</zorder>
+   <zorder>label_6</zorder>
+   <zorder>frame_3</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_11</zorder>
+   <zorder>label_12</zorder>
+   <zorder>label_13</zorder>
+   <zorder>label_14</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1340</width>
+     <width>1208</width>
      <height>21</height>
     </rect>
    </property>

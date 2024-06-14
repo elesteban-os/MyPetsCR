@@ -43,7 +43,7 @@ class Database:
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        uic.loadUi('Citas_Client.ui', self)
+        uic.loadUi('C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Citas_Client.ui', self)
 
         self.sedes = [
             Sede('Central'),

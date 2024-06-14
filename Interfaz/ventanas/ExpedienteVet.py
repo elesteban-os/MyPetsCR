@@ -51,7 +51,7 @@ class HistorialDialog(QDialog):
 class ExpedienteDialog(QDialog):
     def __init__(self):
         super().__init__()
-        uic.loadUi("ExpedienteVet.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\ExpedienteVet.ui", self)
 
         self.id_expediente = None
         self.id_mascota = None

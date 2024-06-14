@@ -144,7 +144,7 @@ def enviar_correo(destinatario, asunto, mensaje):
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        uic.loadUi('Citas_Admi.ui', self)
+        uic.loadUi('C:\Datos1_Proyecto1\MyPetsCR\Interfaz\Citas_Admi.ui', self)
 
         self.sedes = [
             Sede('Central'),

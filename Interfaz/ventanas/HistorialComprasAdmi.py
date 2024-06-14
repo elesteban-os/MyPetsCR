@@ -5,7 +5,7 @@ from PyQt6 import QtWidgets, uic
 class HistorialComprasAdmi(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("HistorialdeFacturacionesVeterinaria.ui", self)
+        uic.loadUi("C:\Datos1_Proyecto1\MyPetsCR\Interfaz\HistorialdeFacturacionesCliente.ui", self)
         self.setup_ui()
 
     def setup_ui(self):
